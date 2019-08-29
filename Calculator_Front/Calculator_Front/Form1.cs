@@ -22,13 +22,13 @@ namespace Calculator_Front
      * |    absolute value
      * (    left parenthesis
      * )    Right parenthesis
-     * s(    Sin
+     * s(    Sin   there will always be a following Rparen after one of these
      * c(    Cos
      * t(    Tan
      * S(    CSC
      * C(    Sec
      * T(    cotan
-     * 
+     * ^    power
      */ 
 
 
@@ -225,6 +225,12 @@ namespace Calculator_Front
         private void buttonDel_Click(object sender, EventArgs e)
         {
             //account for sin and paren
+        }
+
+        private void buttonExp_Click(object sender, EventArgs e)
+        {
+            this.textBox1.Text = this.textBox1.Text + '^';
+            this.Equation = this.Equation + '^';
         }
     }
 }

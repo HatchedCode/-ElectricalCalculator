@@ -67,6 +67,7 @@
             this.areaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.volumeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonDel = new System.Windows.Forms.Button();
+            this.buttonExp = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -456,12 +457,24 @@
             this.buttonDel.UseVisualStyleBackColor = true;
             this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
             // 
+            // buttonExp
+            // 
+            this.buttonExp.BackColor = System.Drawing.Color.DodgerBlue;
+            this.buttonExp.Location = new System.Drawing.Point(443, 273);
+            this.buttonExp.Name = "buttonExp";
+            this.buttonExp.Size = new System.Drawing.Size(75, 23);
+            this.buttonExp.TabIndex = 30;
+            this.buttonExp.Text = "^";
+            this.buttonExp.UseVisualStyleBackColor = false;
+            this.buttonExp.Click += new System.EventHandler(this.buttonExp_Click);
+            // 
             // buttonRParen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(536, 371);
+            this.Controls.Add(this.buttonExp);
             this.Controls.Add(this.buttonDel);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.buttonAbs);
@@ -545,6 +558,7 @@
         private System.Windows.Forms.ToolStripMenuItem areaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem volumeToolStripMenuItem;
         private System.Windows.Forms.Button buttonDel;
+        private System.Windows.Forms.Button buttonExp;
     }
 }
 
