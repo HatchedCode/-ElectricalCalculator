@@ -54,12 +54,6 @@
     <Compile Include="ExpressionNode.cs" />
     <Compile Include="ExpressionTree.cs" />
     <Compile Include="ExpressionTreeFactory.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="ICommand.cs" />
     <Compile Include="MultiplyNode.cs" />
