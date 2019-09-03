@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddNode.cs" />
-    <Compile Include="Cell.cs" />
     <Compile Include="ClosedParanthesis.cs" />
     <Compile Include="ConstantNode.cs" />
     <Compile Include="DivideNode.cs" />
@@ -59,9 +58,7 @@
     <Compile Include="MultiplyNode.cs" />
     <Compile Include="OpenParanthesis.cs" />
     <Compile Include="OperatorNode.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RestoreOptions.cs" />
     <Compile Include="ShuntingYard.cs" />
     <Compile Include="Spreadsheet.cs" />
     <Compile Include="SpreadSheetModifications.cs" />
