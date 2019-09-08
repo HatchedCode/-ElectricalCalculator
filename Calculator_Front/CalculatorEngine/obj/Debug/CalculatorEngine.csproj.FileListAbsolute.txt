@@ -1,0 +1,9 @@
+C:\Users\pauld\OneDrive\Desktop\cpts\422\electricalcalculator\Calculator_Front\CalculatorEngine\obj\Debug\CalculatorEngine.csprojAssemblyReference.cache
+C:\Users\pauld\OneDrive\Desktop\cpts\422\electricalcalculator\Calculator_Front\CalculatorEngine\obj\Debug\CalculatorEngine.Properties.Resources.resources
+C:\Users\pauld\OneDrive\Desktop\cpts\422\electricalcalculator\Calculator_Front\CalculatorEngine\obj\Debug\CalculatorEngine.csproj.GenerateResource.cache
+C:\Users\pauld\OneDrive\Desktop\cpts\422\electricalcalculator\Calculator_Front\CalculatorEngine\obj\Debug\CalculatorEngine.csproj.CoreCompileInputs.cache
+C:\Users\pauld\OneDrive\Desktop\cpts\422\electricalcalculator\Calculator_Front\CalculatorEngine\bin\Debug\CalculatorEngine.exe.config
+C:\Users\pauld\OneDrive\Desktop\cpts\422\electricalcalculator\Calculator_Front\CalculatorEngine\bin\Debug\CalculatorEngine.exe
+C:\Users\pauld\OneDrive\Desktop\cpts\422\electricalcalculator\Calculator_Front\CalculatorEngine\bin\Debug\CalculatorEngine.pdb
+C:\Users\pauld\OneDrive\Desktop\cpts\422\electricalcalculator\Calculator_Front\CalculatorEngine\obj\Debug\CalculatorEngine.exe
+C:\Users\pauld\OneDrive\Desktop\cpts\422\electricalcalculator\Calculator_Front\CalculatorEngine\obj\Debug\CalculatorEngine.pdb

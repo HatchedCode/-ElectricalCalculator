@@ -214,6 +214,13 @@ namespace Calculator_Front
             //run shunting yard
             this.Expressions.AddFirst(this.textBox1.Text);
             this.DispExpressions.AddFirst(this.textBox1.Text);
+
+            this.historyToolStripMenuItem.DropDown.Items.Add(this.textBox1.Text.ToString());
+            CptS321.ExpressionTree expression =new CptS321.ExpressionTree(this.Equation);
+           double answer= expression.Evaluate();
+            this.textBox1.Text = answer.ToString();
+
+
             //double a= answer
             //text=answer
             //add answer to answers
@@ -224,6 +231,23 @@ namespace Calculator_Front
 
         private void buttonDel_Click(object sender, EventArgs e)
         {
+
+            string newEquation = "";
+            string newDisplay = "";
+            for (int i=0; i < this.Equation.Length-1; i++)
+            {
+                newEquation = newEquation + this.Equation[i];
+            }
+            this.Equation = newEquation;
+
+            for (int i = 0; i < this.textBox1.Text.Length - 1; i++)
+            {
+                newDisplay = newDisplay + this.textBox1.Text[i];
+            }
+
+            this.textBox1.Text = newDisplay;
+        
+
             //account for sin and paren
         }
 
@@ -231,6 +255,11 @@ namespace Calculator_Front
         {
             this.textBox1.Text = this.textBox1.Text + '^';
             this.Equation = this.Equation + '^';
+        }
+
+        private void historyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
