@@ -10,7 +10,7 @@ namespace CptS321
     internal class SineNode : TrigNode
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConstantNode"/> class.
+        /// Initializes a new instance of the <see cref="SineNode"/> class.
         /// Sets the constant value
         /// </summary>
         /// <param name="value">The constant value</param>

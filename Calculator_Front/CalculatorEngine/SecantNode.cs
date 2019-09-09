@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace CptS321
 {
-    class CosineNode : TrigNode
+    class SecantNode : TrigNode
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CosineNode"/> class.
+        /// Initializes a new instance of the <see cref="SecantNode"/> class.
         /// Sets the constant value
         /// </summary>
         /// <param name="value">The constant value</param>
-        public CosineNode(double value) : base(value)
+        public SecantNode(double value) : base(value)
         {
 
         }
@@ -36,7 +36,7 @@ namespace CptS321
         /// <returns>Returns the evaluation</returns>
         public override double Evaluate()
         {
-            return this.angularMeasurement == AngularMeasurement.Rad ? Math.Cos(this.Value) : Math.Cos(ConvertToDegree());
+            return this.angularMeasurement == AngularMeasurement.Rad ? (1 / Math.Cos(this.Value)) : (1 / Math.Cos(ConvertToDegree()));
         }
     }
 }
