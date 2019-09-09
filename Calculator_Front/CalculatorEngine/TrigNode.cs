@@ -33,5 +33,14 @@ namespace CptS321
         /// Expression
         /// </summary>
         public string Expression { get; set; }
+
+        /// <summary>
+        /// Expression
+        /// </summary>
+        internal double ConvertToDegree()
+        {
+            return (this.Value * 180) / Math.PI;
+        }
+
     }
 }
