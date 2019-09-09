@@ -29,6 +29,8 @@ namespace Calculator_Front
      * C(    Sec
      * T(    cotan
      * ^    power
+     * D    degrees
+     * R    Radians
      */ 
 
 
@@ -260,6 +262,18 @@ namespace Calculator_Front
         private void historyToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonDeg_Click(object sender, EventArgs e)
+        {
+            this.textBox1.Text = this.textBox1.Text + "Deg(";
+            this.Equation = this.Equation + "D(";
+        }
+
+        private void buttonRad_Click(object sender, EventArgs e)
+        {
+            this.textBox1.Text = this.textBox1.Text + "Rad(";
+            this.Equation = this.Equation + "R(";
         }
     }
 }
