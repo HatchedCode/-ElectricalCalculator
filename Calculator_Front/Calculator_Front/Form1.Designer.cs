@@ -66,9 +66,11 @@
             this.quadraticToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.areaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.volumeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.historyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonDel = new System.Windows.Forms.Button();
             this.buttonExp = new System.Windows.Forms.Button();
-            this.historyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonDeg = new System.Windows.Forms.Button();
+            this.buttonRad = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -428,26 +430,33 @@
             // pythagoreanToolStripMenuItem
             // 
             this.pythagoreanToolStripMenuItem.Name = "pythagoreanToolStripMenuItem";
-            this.pythagoreanToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.pythagoreanToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.pythagoreanToolStripMenuItem.Text = "Pythagorean";
             // 
             // quadraticToolStripMenuItem1
             // 
             this.quadraticToolStripMenuItem1.Name = "quadraticToolStripMenuItem1";
-            this.quadraticToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
+            this.quadraticToolStripMenuItem1.Size = new System.Drawing.Size(167, 26);
             this.quadraticToolStripMenuItem1.Text = "quadratic";
             // 
             // areaToolStripMenuItem
             // 
             this.areaToolStripMenuItem.Name = "areaToolStripMenuItem";
-            this.areaToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.areaToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.areaToolStripMenuItem.Text = "area";
             // 
             // volumeToolStripMenuItem
             // 
             this.volumeToolStripMenuItem.Name = "volumeToolStripMenuItem";
-            this.volumeToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.volumeToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.volumeToolStripMenuItem.Text = "volume";
+            // 
+            // historyToolStripMenuItem
+            // 
+            this.historyToolStripMenuItem.Name = "historyToolStripMenuItem";
+            this.historyToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
+            this.historyToolStripMenuItem.Text = "History";
+            this.historyToolStripMenuItem.Click += new System.EventHandler(this.historyToolStripMenuItem_Click);
             // 
             // buttonDel
             // 
@@ -470,12 +479,25 @@
             this.buttonExp.UseVisualStyleBackColor = false;
             this.buttonExp.Click += new System.EventHandler(this.buttonExp_Click);
             // 
-            // historyToolStripMenuItem
+            // buttonDeg
             // 
-            this.historyToolStripMenuItem.Name = "historyToolStripMenuItem";
-            this.historyToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
-            this.historyToolStripMenuItem.Text = "History";
-            this.historyToolStripMenuItem.Click += new System.EventHandler(this.historyToolStripMenuItem_Click);
+            this.buttonDeg.Location = new System.Drawing.Point(336, 314);
+            this.buttonDeg.Name = "buttonDeg";
+            this.buttonDeg.Size = new System.Drawing.Size(75, 23);
+            this.buttonDeg.TabIndex = 31;
+            this.buttonDeg.Text = "Deg";
+            this.buttonDeg.UseVisualStyleBackColor = true;
+            this.buttonDeg.Click += new System.EventHandler(this.buttonDeg_Click);
+            // 
+            // buttonRad
+            // 
+            this.buttonRad.Location = new System.Drawing.Point(349, 344);
+            this.buttonRad.Name = "buttonRad";
+            this.buttonRad.Size = new System.Drawing.Size(75, 23);
+            this.buttonRad.TabIndex = 32;
+            this.buttonRad.Text = "Rad";
+            this.buttonRad.UseVisualStyleBackColor = true;
+            this.buttonRad.Click += new System.EventHandler(this.buttonRad_Click);
             // 
             // buttonRParen
             // 
@@ -483,6 +505,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(536, 371);
+            this.Controls.Add(this.buttonRad);
+            this.Controls.Add(this.buttonDeg);
             this.Controls.Add(this.buttonExp);
             this.Controls.Add(this.buttonDel);
             this.Controls.Add(this.menuStrip1);
@@ -569,6 +593,8 @@
         private System.Windows.Forms.Button buttonDel;
         private System.Windows.Forms.Button buttonExp;
         private System.Windows.Forms.ToolStripMenuItem historyToolStripMenuItem;
+        private System.Windows.Forms.Button buttonDeg;
+        private System.Windows.Forms.Button buttonRad;
     }
 }
 
