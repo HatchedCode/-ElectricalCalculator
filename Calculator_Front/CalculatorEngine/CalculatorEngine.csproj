@@ -65,6 +65,7 @@
     <Compile Include="SineNode.cs" />
     <Compile Include="SpreadSheetModifications.cs" />
     <Compile Include="SubtractNode.cs" />
+    <Compile Include="TangentNode.cs" />
     <Compile Include="TrigNode.cs" />
     <Compile Include="UndoRedo.cs" />
     <Compile Include="VariableNode.cs" />
