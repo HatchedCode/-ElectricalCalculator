@@ -9,7 +9,7 @@ namespace CptS321
     internal abstract class TrigNode : ExpressionNode
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConstantNode"/> class.
+        /// Initializes a new instance of the <see cref="TrigNode"/> class.
         /// Sets the constant value
         /// </summary>
         /// <param name="value">The constant value</param>
