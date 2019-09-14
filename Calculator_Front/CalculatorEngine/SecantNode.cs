@@ -19,6 +19,11 @@ namespace CptS321
         }
 
         /// <summary>
+        /// Gets the name of secant
+        /// </summary>
+        public static string trigName => "sec";
+
+        /// <summary>
         /// Gets and sets the mesurement for the trig function
         /// </summary>
         public AngularMeasurement angularMeasurement

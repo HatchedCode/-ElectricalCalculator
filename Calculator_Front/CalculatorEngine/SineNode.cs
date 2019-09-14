@@ -20,6 +20,11 @@ namespace CptS321
         }
 
         /// <summary>
+        /// Gets the name of sine
+        /// </summary>
+        public static string trigName => "sin";
+
+        /// <summary>
         /// Gets and sets the mesurement for the trig function
         /// </summary>
         public AngularMeasurement angularMeasurement
