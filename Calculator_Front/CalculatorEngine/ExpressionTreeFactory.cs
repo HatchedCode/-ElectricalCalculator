@@ -122,7 +122,7 @@ namespace CptS321
         /// </summary>
         /// <param name="trigOp">The Trig representation as a string</param>
         /// <returns>A bool</returns>
-        public bool IsValidTrigOperator(char trigOp)
+        public bool IsValidTrigOperator(string trigOp)
         {
             if (new ExpressionTreeFactory().trigOperators.ContainsKey(trigOp))
             {
