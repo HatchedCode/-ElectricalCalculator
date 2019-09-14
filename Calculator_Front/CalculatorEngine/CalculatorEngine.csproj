@@ -49,7 +49,9 @@
     <Compile Include="AddNode.cs" />
     <Compile Include="ClosedParanthesis.cs" />
     <Compile Include="ConstantNode.cs" />
+    <Compile Include="CosecNode.cs" />
     <Compile Include="CosineNode.cs" />
+    <Compile Include="CotanNode.cs" />
     <Compile Include="DivideNode.cs" />
     <Compile Include="ExpressionNode.cs" />
     <Compile Include="ExpressionTree.cs" />
