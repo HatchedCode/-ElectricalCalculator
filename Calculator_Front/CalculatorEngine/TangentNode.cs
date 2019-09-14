@@ -21,17 +21,17 @@ namespace CptS321
         /// <summary>
         /// Gets the name of tangent
         /// </summary>
-        public static string trigName => "tan";
+        public static string TrigName => "tan";
 
         /// <summary>
         /// Gets and sets the mesurement for the trig function
         /// </summary>
-        public AngularMeasurement angularMeasurement
+        public AngularMeasurement AngleMeasurement
         {
-            get { return angularMeasurement; }
+            get { return AngleMeasurement; }
             set
             {
-                this.angularMeasurement = value;
+                this.AngleMeasurement = value;
             }
         }
 
@@ -41,7 +41,7 @@ namespace CptS321
         /// <returns>Returns the evaluation</returns>
         public override double Evaluate()
         {
-            return this.angularMeasurement == AngularMeasurement.Rad ? Math.Tan(this.Value) : Math. Tan(ConvertToDegree());
+            return this.AngleMeasurement == AngularMeasurement.Rad ? Math.Tan(this.Value) : Math. Tan(ConvertToDegree());
         }
     }
 }

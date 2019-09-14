@@ -19,6 +19,10 @@ namespace CptS321
         /// </summary>
         private Dictionary<char, Type> operators = new Dictionary<char, Type>();
 
+        /// A dictionary for the new trig operators
+        /// </summary>
+        private Dictionary<string, Type> trigOperators = new Dictionary<string, Type>();
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ExpressionTreeFactory"/> class.
         /// The expression tree constructor
@@ -26,6 +30,7 @@ namespace CptS321
         public ExpressionTreeFactory()
         {
             this.TraverseAvailableOperators((op, type) => this.operators.Add(op, type));
+            this.TraverseAvailableTrigOperators((trigOp, type) => this.trigOperators.Add(trigOp, type));
         }
 
         /// <summary>
@@ -34,6 +39,13 @@ namespace CptS321
         /// <param name="op">A character representing the operator</param>
         /// <param name="type">The type of operator</param>
         private delegate void OnOperator(char op, Type type);
+
+        /// <summary>
+        /// A delegate for the current TrigOperator
+        /// </summary>
+        /// <param name="op">A string representing the TrigOperator</param>
+        /// <param name="type">The type of TrigOperator</param>
+        private delegate void OnTrigOperator(string trigOp, Type type);
 
         /// <summary>
         /// Creates the new operator
@@ -52,6 +64,25 @@ namespace CptS321
             }
 
             throw new Exception("Unhandled Operator!");
+        }
+
+        /// <summary>
+        /// Creates the new TrigOperator
+        /// </summary>
+        /// <param name="op">The trig operator string</param>
+        /// <returns>The new node</returns>
+        public TrigNode CreateTrigOperatorNode(string trigOp)
+        {
+            if (this.trigOperators.ContainsKey(trigOp))
+            {
+                object trigOperatorNodeObject = System.Activator.CreateInstance(this.trigOperators[trigOp]);
+                if (trigOperatorNodeObject is TrigNode)
+                {
+                    return (TrigNode)trigOperatorNodeObject;
+                }
+            }
+
+            throw new Exception("Unhandled TrigOperator!");
         }
 
         /// <summary>
@@ -87,6 +118,21 @@ namespace CptS321
         }
 
         /// <summary>
+        /// Checks to make sure the TrigOperator is valid
+        /// </summary>
+        /// <param name="trigOp">The Trig representation as a string</param>
+        /// <returns>A bool</returns>
+        public bool IsValidTrigOperator(char trigOp)
+        {
+            if (new ExpressionTreeFactory().trigOperators.ContainsKey(trigOp))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        /// <summary>
         /// Traverse through the operators
         /// </summary>
         /// <param name="onOperator">The current operator</param>
@@ -111,5 +157,34 @@ namespace CptS321
                 }
             }
         }
+
+
+        /// <summary>
+        /// Traverse through the TrigOperators
+        /// </summary>
+        /// <param name="onOperator">The current TrigOperator</param>
+        private void TraverseAvailableTrigOperators(OnTrigOperator onTrigOperator)
+        {
+            Type operatorNodeType = typeof(TrigNode);
+            foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
+            {
+                IEnumerable<Type> operatorTypes = assembly.GetTypes().Where(type => type.IsSubclassOf(operatorNodeType));
+                foreach (var type in operatorTypes)
+                {
+                    PropertyInfo operatorField = type.GetProperty("TrigName");
+                    if (operatorField != null)
+                    {
+                        object value = operatorField.GetValue(type);
+                        if (value is string)
+                        {
+                            string operatorSymbol = (string)value;
+                            onTrigOperator(operatorSymbol, type);
+                        }
+                    }
+                }
+            }
+        }
+
+
     }
 }

@@ -22,17 +22,17 @@ namespace CptS321
         /// <summary>
         /// Gets the name of sine
         /// </summary>
-        public static string trigName => "sin";
+        public static string TrigName => "sin";
 
         /// <summary>
         /// Gets and sets the mesurement for the trig function
         /// </summary>
-        public AngularMeasurement angularMeasurement
+        public AngularMeasurement AngleMeasurement
         {
-            get { return angularMeasurement; }
+            get { return AngleMeasurement; }
             set
             {
-                this.angularMeasurement = value;
+                this.AngleMeasurement = value;
             }
         }
 
@@ -42,7 +42,7 @@ namespace CptS321
         /// <returns>Returns the evaluation</returns>
         public override double Evaluate()
         {
-            return this.angularMeasurement == AngularMeasurement.Rad ? Math.Sin(this.Value): Math.Sin(ConvertToDegree());
+            return this.AngleMeasurement == AngularMeasurement.Rad ? Math.Sin(this.Value): Math.Sin(ConvertToDegree());
         }
 
     }
