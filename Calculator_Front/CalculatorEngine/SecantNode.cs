@@ -19,14 +19,19 @@ namespace CptS321
         }
 
         /// <summary>
+        /// Gets the name of secant
+        /// </summary>
+        public static string TrigName => "sec";
+
+        /// <summary>
         /// Gets and sets the mesurement for the trig function
         /// </summary>
-        public AngularMeasurement angularMeasurement
+        public AngularMeasurement AngleMeasurement
         {
-            get { return angularMeasurement; }
+            get { return AngleMeasurement; }
             set
             {
-                this.angularMeasurement = value;
+                this.AngleMeasurement = value;
             }
         }
 
@@ -36,7 +41,7 @@ namespace CptS321
         /// <returns>Returns the evaluation</returns>
         public override double Evaluate()
         {
-            return this.angularMeasurement == AngularMeasurement.Rad ? (1 / Math.Cos(this.Value)) : (1 / Math.Cos(ConvertToDegree()));
+            return this.AngleMeasurement == AngularMeasurement.Rad ? (1 / Math.Cos(this.Value)) : (1 / Math.Cos(ConvertToDegree()));
         }
     }
 }

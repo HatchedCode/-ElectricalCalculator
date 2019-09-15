@@ -236,16 +236,40 @@ namespace Calculator_Front
 
             string newEquation = "";
             string newDisplay = "";
-            for (int i=0; i < this.Equation.Length-1; i++)
-            {
-                newEquation = newEquation + this.Equation[i];
-            }
-            this.Equation = newEquation;
 
-            for (int i = 0; i < this.textBox1.Text.Length - 1; i++)
-            {
-                newDisplay = newDisplay + this.textBox1.Text[i];
+         
+            if (this.Equation.Length > 1&& this.Equation[this.Equation.Length - 1] == '(' && (((this.Equation[this.Equation.Length - 2] >= 'a' && this.Equation[this.Equation.Length - 2] <= 'z')) || (this.Equation[this.Equation.Length - 2] >= 'A' && this.Equation[this.Equation.Length - 2] <= 'Z'))){
+
+
+                for (int i = 0; i < this.Equation.Length - 2; i++)
+                {
+                    newEquation = newEquation + this.Equation[i];
+                }
+                this.Equation = newEquation;
+
+                for (int i = 0; i < this.textBox1.Text.Length - 4; i++)
+                {
+                    newDisplay = newDisplay + this.textBox1.Text[i];
+                }
             }
+            else
+            {
+
+
+                for (int i = 0; i < this.Equation.Length - 1; i++)
+                {
+                    newEquation = newEquation + this.Equation[i];
+                }
+                this.Equation = newEquation;
+
+                for (int i = 0; i < this.textBox1.Text.Length - 1; i++)
+                {
+                    newDisplay = newDisplay + this.textBox1.Text[i];
+                }
+            }
+
+
+         
 
             this.textBox1.Text = newDisplay;
         
