@@ -59,6 +59,7 @@
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="ICommand.cs" />
     <Compile Include="maincs.cs" />
+    <Compile Include="ModNode.cs" />
     <Compile Include="MultiplyNode.cs" />
     <Compile Include="OpenParanthesis.cs" />
     <Compile Include="OperatorNode.cs" />
