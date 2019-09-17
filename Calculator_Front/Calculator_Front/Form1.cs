@@ -274,7 +274,7 @@ namespace Calculator_Front
             this.textBox1.Text = newDisplay;
         
 
-            //account for sin and paren
+ 
         }
 
         private void buttonExp_Click(object sender, EventArgs e)
