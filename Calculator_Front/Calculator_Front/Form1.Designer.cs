@@ -430,26 +430,30 @@
             // pythagoreanToolStripMenuItem
             // 
             this.pythagoreanToolStripMenuItem.Name = "pythagoreanToolStripMenuItem";
-            this.pythagoreanToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.pythagoreanToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.pythagoreanToolStripMenuItem.Text = "Pythagorean";
+            this.pythagoreanToolStripMenuItem.Click += new System.EventHandler(this.pythagoreanToolStripMenuItem_Click);
             // 
             // quadraticToolStripMenuItem1
             // 
             this.quadraticToolStripMenuItem1.Name = "quadraticToolStripMenuItem1";
-            this.quadraticToolStripMenuItem1.Size = new System.Drawing.Size(167, 26);
+            this.quadraticToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
             this.quadraticToolStripMenuItem1.Text = "quadratic";
+            this.quadraticToolStripMenuItem1.Click += new System.EventHandler(this.quadraticToolStripMenuItem1_Click);
             // 
             // areaToolStripMenuItem
             // 
             this.areaToolStripMenuItem.Name = "areaToolStripMenuItem";
-            this.areaToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.areaToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.areaToolStripMenuItem.Text = "area";
+            this.areaToolStripMenuItem.Click += new System.EventHandler(this.areaToolStripMenuItem_Click);
             // 
             // volumeToolStripMenuItem
             // 
             this.volumeToolStripMenuItem.Name = "volumeToolStripMenuItem";
-            this.volumeToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.volumeToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.volumeToolStripMenuItem.Text = "volume";
+            this.volumeToolStripMenuItem.Click += new System.EventHandler(this.volumeToolStripMenuItem_Click);
             // 
             // historyToolStripMenuItem
             // 

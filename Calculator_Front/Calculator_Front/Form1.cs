@@ -216,13 +216,12 @@ namespace Calculator_Front
             //run shunting yard
             this.Expressions.AddFirst(this.textBox1.Text);
             this.DispExpressions.AddFirst(this.textBox1.Text);
-
-            this.historyToolStripMenuItem.DropDown.Items.Add(this.textBox1.Text.ToString());
+            
             CptS321.ExpressionTree expression =new CptS321.ExpressionTree(this.Equation);
            double answer= expression.Evaluate();
+   
+            this.historyToolStripMenuItem.DropDown.Items.Add(this.textBox1.Text.ToString()+"="+answer.ToString());
             this.textBox1.Text = answer.ToString();
-
-
             //double a= answer
             //text=answer
             //add answer to answers
@@ -299,5 +298,26 @@ namespace Calculator_Front
             this.textBox1.Text = this.textBox1.Text + "Rad(";
             this.Equation = this.Equation + "R(";
         }
+
+        private void pythagoreanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("a^2+b^2=c^2");
+        }
+
+        private void quadraticToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("(-b+- (b^2 -4ac)^.5)/2a");
+        }
+
+        private void areaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("square:side^2\n rectangle: base* hight\n triangle:base*hight/2 ");
+        }
+
+        private void volumeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("square:side^3\n rectangle: base* hight* width ");
+        }
+    
     }
 }
