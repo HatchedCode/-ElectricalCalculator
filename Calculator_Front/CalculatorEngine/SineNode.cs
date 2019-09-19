@@ -22,7 +22,7 @@ namespace CptS321
         /// <summary>
         /// Gets the name of sine
         /// </summary>
-        public static string TrigName => "sin";
+        public static string TrigName => "s";
 
         /// <summary>
         /// Gets and sets the mesurement for the trig function

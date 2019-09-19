@@ -21,7 +21,7 @@ namespace CptS321
         /// <summary>
         /// Gets the name of tangent
         /// </summary>
-        public static string TrigName => "tan";
+        public static string TrigName => "t";
 
         /// <summary>
         /// Gets and sets the mesurement for the trig function

@@ -21,7 +21,7 @@ namespace CptS321
         /// <summary>
         /// Gets the name of cosine
         /// </summary>
-        public static string TrigName => "cos";
+        public static string TrigName => "c";
 
         /// <summary>
         /// Gets and sets the mesurement for the trig function

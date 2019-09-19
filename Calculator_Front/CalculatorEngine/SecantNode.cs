@@ -21,7 +21,7 @@ namespace CptS321
         /// <summary>
         /// Gets the name of secant
         /// </summary>
-        public static string TrigName => "sec";
+        public static string TrigName => "C";
 
         /// <summary>
         /// Gets and sets the mesurement for the trig function

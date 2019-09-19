@@ -69,7 +69,6 @@
             this.historyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonDel = new System.Windows.Forms.Button();
             this.buttonExp = new System.Windows.Forms.Button();
-            this.buttonDeg = new System.Windows.Forms.Button();
             this.buttonRad = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -430,28 +429,28 @@
             // pythagoreanToolStripMenuItem
             // 
             this.pythagoreanToolStripMenuItem.Name = "pythagoreanToolStripMenuItem";
-            this.pythagoreanToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.pythagoreanToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.pythagoreanToolStripMenuItem.Text = "Pythagorean";
             this.pythagoreanToolStripMenuItem.Click += new System.EventHandler(this.pythagoreanToolStripMenuItem_Click);
             // 
             // quadraticToolStripMenuItem1
             // 
             this.quadraticToolStripMenuItem1.Name = "quadraticToolStripMenuItem1";
-            this.quadraticToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
+            this.quadraticToolStripMenuItem1.Size = new System.Drawing.Size(167, 26);
             this.quadraticToolStripMenuItem1.Text = "quadratic";
             this.quadraticToolStripMenuItem1.Click += new System.EventHandler(this.quadraticToolStripMenuItem1_Click);
             // 
             // areaToolStripMenuItem
             // 
             this.areaToolStripMenuItem.Name = "areaToolStripMenuItem";
-            this.areaToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.areaToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.areaToolStripMenuItem.Text = "area";
             this.areaToolStripMenuItem.Click += new System.EventHandler(this.areaToolStripMenuItem_Click);
             // 
             // volumeToolStripMenuItem
             // 
             this.volumeToolStripMenuItem.Name = "volumeToolStripMenuItem";
-            this.volumeToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.volumeToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.volumeToolStripMenuItem.Text = "volume";
             this.volumeToolStripMenuItem.Click += new System.EventHandler(this.volumeToolStripMenuItem_Click);
             // 
@@ -483,23 +482,13 @@
             this.buttonExp.UseVisualStyleBackColor = false;
             this.buttonExp.Click += new System.EventHandler(this.buttonExp_Click);
             // 
-            // buttonDeg
-            // 
-            this.buttonDeg.Location = new System.Drawing.Point(336, 314);
-            this.buttonDeg.Name = "buttonDeg";
-            this.buttonDeg.Size = new System.Drawing.Size(75, 23);
-            this.buttonDeg.TabIndex = 31;
-            this.buttonDeg.Text = "Deg";
-            this.buttonDeg.UseVisualStyleBackColor = true;
-            this.buttonDeg.Click += new System.EventHandler(this.buttonDeg_Click);
-            // 
             // buttonRad
             // 
             this.buttonRad.Location = new System.Drawing.Point(349, 344);
             this.buttonRad.Name = "buttonRad";
             this.buttonRad.Size = new System.Drawing.Size(75, 23);
             this.buttonRad.TabIndex = 32;
-            this.buttonRad.Text = "Rad";
+            this.buttonRad.Text = "Rad/Deg";
             this.buttonRad.UseVisualStyleBackColor = true;
             this.buttonRad.Click += new System.EventHandler(this.buttonRad_Click);
             // 
@@ -510,7 +499,6 @@
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(536, 371);
             this.Controls.Add(this.buttonRad);
-            this.Controls.Add(this.buttonDeg);
             this.Controls.Add(this.buttonExp);
             this.Controls.Add(this.buttonDel);
             this.Controls.Add(this.menuStrip1);
@@ -597,7 +585,6 @@
         private System.Windows.Forms.Button buttonDel;
         private System.Windows.Forms.Button buttonExp;
         private System.Windows.Forms.ToolStripMenuItem historyToolStripMenuItem;
-        private System.Windows.Forms.Button buttonDeg;
         private System.Windows.Forms.Button buttonRad;
     }
 }

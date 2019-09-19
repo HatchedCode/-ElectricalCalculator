@@ -18,6 +18,8 @@ namespace CptS321
 
         }
 
+        public static string TrigName => "S";
+
         /// <summary>
         /// Gets and sets the mesurement for the trig function
         /// </summary>
