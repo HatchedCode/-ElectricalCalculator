@@ -40,6 +40,8 @@ namespace Calculator_Front
         LinkedList<string> Expressions = new LinkedList<string>();
         LinkedList<string> DispExpressions = new LinkedList<string>();
         LinkedList<Double> Answers = new LinkedList<Double>();
+
+        char Mode = 'D';
             
 
         public buttonRParen()
@@ -176,44 +178,43 @@ namespace Calculator_Front
         private void buttonSin_Click(object sender, EventArgs e)
         {
             this.textBox1.Text = this.textBox1.Text + "sin(";
-            this.Equation = this.Equation + "s(";
+            this.Equation = this.Equation + "s"+Mode+"(";
         }
 
         private void buttonCos_Click(object sender, EventArgs e)
         {
             this.textBox1.Text = this.textBox1.Text + "cos(";
-            this.Equation = this.Equation + "c(";
+            this.Equation = this.Equation + "c" + Mode + "(";
         }
 
         private void buttonTan_Click(object sender, EventArgs e)
         {
             this.textBox1.Text = this.textBox1.Text + "tan(";
-            this.Equation = this.Equation + "t(";
+            this.Equation = this.Equation + "t" + Mode + "(";
         }
 
         private void buttonSec_Click(object sender, EventArgs e)
         {
             this.textBox1.Text = this.textBox1.Text + "sec(";
-            this.Equation = this.Equation + "C(";
+            this.Equation = this.Equation + "C" + Mode + "(";
         }
 
         private void buttonCsc_Click(object sender, EventArgs e)
         {
             this.textBox1.Text = this.textBox1.Text + "Csc(";
-            this.Equation = this.Equation + "S(";
+            this.Equation = this.Equation + "S" + Mode + "(";
         }
 
         private void buttonCot_Click(object sender, EventArgs e)
         {
 
             this.textBox1.Text = this.textBox1.Text + "Cot(";
-            this.Equation = this.Equation + "T(";
-
-        }
+            this.Equation = this.Equation + "T" + Mode + "(";
+                   }
 
         private void buttonEquls_Click(object sender, EventArgs e)
         {
-            //run shunting yard
+         
             this.Expressions.AddFirst(this.textBox1.Text);
             this.DispExpressions.AddFirst(this.textBox1.Text);
             
@@ -222,10 +223,7 @@ namespace Calculator_Front
    
             this.historyToolStripMenuItem.DropDown.Items.Add(this.textBox1.Text.ToString()+"="+answer.ToString());
             this.textBox1.Text = answer.ToString();
-            //double a= answer
-            //text=answer
-            //add answer to answers
-            //update answers dropdown
+           
 
 
         }
@@ -289,14 +287,49 @@ namespace Calculator_Front
 
         private void buttonDeg_Click(object sender, EventArgs e)
         {
-            this.textBox1.Text = this.textBox1.Text + "Deg(";
-            this.Equation = this.Equation + "D(";
+
         }
 
         private void buttonRad_Click(object sender, EventArgs e)
         {
-            this.textBox1.Text = this.textBox1.Text + "Rad(";
-            this.Equation = this.Equation + "R(";
+
+
+            string temp = "";
+            if (Mode == 'R')
+            {
+              Mode = 'D';
+                MessageBox.Show("Degree Mode");
+                for (int i = 0; i < Equation.Length; i++)
+                {
+                    if (Equation[i] == 'R')
+                    {
+                        temp = temp + 'D';
+                    }
+                    else
+                    {
+                        temp = temp + Equation[i];
+                    }
+                }
+            }
+            else if (Mode == 'D')
+            {
+                MessageBox.Show("Radian Mode"); 
+                Mode = 'R';
+                for (int i = 0; i < Equation.Length;i++)
+                {
+                    if (Equation[i] == 'D')
+                    {
+                        temp = temp + 'R';
+                    }
+                    else
+                    {
+                        temp = temp + Equation[i];
+                    }
+                }
+
+            }
+
+            this.Equation = temp;
         }
 
         private void pythagoreanToolStripMenuItem_Click(object sender, EventArgs e)
