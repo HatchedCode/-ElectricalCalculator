@@ -28,7 +28,7 @@ namespace CptS321
         /// <returns>Returns the evaluation</returns>
         public override double Evaluate()
         {
-            return this.AngleMeasurement == 'R' ? (1 / Math.Cos(this.Value)) : (1 / Math.Cos(ConvertToDegree()));
+            return this.AngleMeasurement == 'R' ? (1 / Math.Cos(this.Value)) : Math.Round((1 / Math.Cos(ConvertToDegree())), 4);
         }
     }
 }

@@ -51,7 +51,7 @@ namespace CptS321
         /// </summary>
         internal double ConvertToDegree()
         {
-            return (this.Value * 180) / Math.PI;
+            return (Math.PI / 180) * this.Value;
         }
 
     }

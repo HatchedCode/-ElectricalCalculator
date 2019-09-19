@@ -30,7 +30,7 @@ namespace CptS321
         /// <returns>Returns the evaluation</returns>
         public override double Evaluate()
         {
-            return this.AngleMeasurement == 'R' ? Math.Sin(this.Value): Math.Sin(ConvertToDegree());
+            return this.AngleMeasurement == 'R' ? Math.Sin(this.Value): Math.Round(Math.Sin(this.ConvertToDegree()), 4);
         }
 
     }

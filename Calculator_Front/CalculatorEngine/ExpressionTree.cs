@@ -167,7 +167,8 @@ namespace CptS321
         /// <returns>An evaluation</returns>
         private double Evaluate(ExpressionNode theNode)
         {
-            return theNode.Evaluate();
+            double temp = theNode.Evaluate();
+            return temp;
         }
 
         /// <summary>
