@@ -93,7 +93,7 @@ namespace CptS321
                         char trigFunctionIdentifier = this.infixexpression[index];
                         index += 1;
                         char angleMeasurement = this.infixexpression[index];
-
+                        index += 1;
                         index += 1; // we will skip over the '('
 
                         string temp = string.Empty;
