@@ -13,22 +13,14 @@ namespace CptS321
         /// Sets the constant value
         /// </summary>
         /// <param name="value">The constant value</param>
-        public CotanNode(double value) : base(value)
+        public CotanNode(double value, char measurement) : base(value, measurement)
         {
-
         }
 
         /// <summary>
-        /// Gets and sets the mesurement for the trig function
+        /// Gets the name of cosine
         /// </summary>
-        public AngularMeasurement angularMeasurement
-        {
-            get { return angularMeasurement; }
-            set
-            {
-                this.angularMeasurement = value;
-            }
-        }
+        public static char TrigName => 'T';
 
         /// <summary>
         /// Evaluates using the built in Sine function.
@@ -36,7 +28,7 @@ namespace CptS321
         /// <returns>Returns the evaluation</returns>
         public override double Evaluate()
         {
-            return this.angularMeasurement == AngularMeasurement.Rad ? (1 / Math.Tan(this.Value)) : (1 / Math.Tan(ConvertToDegree()));
+            return this.AngleMeasurement == 'R' ? (1 / Math.Tan(this.Value)) : (1 / Math.Tan(ConvertToDegree()));
         }
     }
 }

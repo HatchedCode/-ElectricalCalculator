@@ -14,27 +14,15 @@ namespace CptS321
         /// Sets the constant value
         /// </summary>
         /// <param name="value">The constant value</param>
-        public SineNode(double value) : base(value)
+        public SineNode(double value, char measurement) : base(value, measurement)
         {
-
         }
 
         /// <summary>
         /// Gets the name of sine
         /// </summary>
-        public static string TrigName => "sin";
+        public static char TrigName => 's';
 
-        /// <summary>
-        /// Gets and sets the mesurement for the trig function
-        /// </summary>
-        public AngularMeasurement AngleMeasurement
-        {
-            get { return AngleMeasurement; }
-            set
-            {
-                this.AngleMeasurement = value;
-            }
-        }
 
         /// <summary>
         /// Evaluates using the built in Sine function.
@@ -42,7 +30,7 @@ namespace CptS321
         /// <returns>Returns the evaluation</returns>
         public override double Evaluate()
         {
-            return this.AngleMeasurement == AngularMeasurement.Rad ? Math.Sin(this.Value): Math.Sin(ConvertToDegree());
+            return this.AngleMeasurement == 'R' ? Math.Sin(this.Value): Math.Sin(ConvertToDegree());
         }
 
     }

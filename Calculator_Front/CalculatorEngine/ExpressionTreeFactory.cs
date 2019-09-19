@@ -21,7 +21,7 @@ namespace CptS321
 
         /// A dictionary for the new trig operators
         /// </summary>
-        private Dictionary<string, Type> trigOperators = new Dictionary<string, Type>();
+        private Dictionary<char, Type> trigOperators = new Dictionary<char, Type>();
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ExpressionTreeFactory"/> class.
@@ -45,7 +45,7 @@ namespace CptS321
         /// </summary>
         /// <param name="op">A string representing the TrigOperator</param>
         /// <param name="type">The type of TrigOperator</param>
-        private delegate void OnTrigOperator(string trigOp, Type type);
+        private delegate void OnTrigOperator(char trigOp, Type type);
 
         /// <summary>
         /// Creates the new operator
@@ -71,11 +71,11 @@ namespace CptS321
         /// </summary>
         /// <param name="op">The trig operator string</param>
         /// <returns>The new node</returns>
-        public TrigNode CreateTrigOperatorNode(string trigOp)
+        public TrigNode CreateTrigOperatorNode(char trigOp, double value, char measurement)
         {
             if (this.trigOperators.ContainsKey(trigOp))
             {
-                object trigOperatorNodeObject = System.Activator.CreateInstance(this.trigOperators[trigOp]);
+                object trigOperatorNodeObject = System.Activator.CreateInstance(this.trigOperators[trigOp], new object[] { value, measurement });
                 if (trigOperatorNodeObject is TrigNode)
                 {
                     return (TrigNode)trigOperatorNodeObject;
@@ -122,7 +122,7 @@ namespace CptS321
         /// </summary>
         /// <param name="trigOp">The Trig representation as a string</param>
         /// <returns>A bool</returns>
-        public bool IsValidTrigOperator(string trigOp)
+        public bool IsValidTrigOperator(char trigOp)
         {
             if (new ExpressionTreeFactory().trigOperators.ContainsKey(trigOp))
             {
@@ -175,9 +175,9 @@ namespace CptS321
                     if (operatorField != null)
                     {
                         object value = operatorField.GetValue(type);
-                        if (value is string)
+                        if (value is char)
                         {
-                            string operatorSymbol = (string)value;
+                            char operatorSymbol = (char)value;
                             onTrigOperator(operatorSymbol, type);
                         }
                     }

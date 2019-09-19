@@ -13,3 +13,12 @@ C:\Users\odbak\Desktop\electricalcalculator\Calculator_Front\CalculatorEngine\ob
 C:\Users\odbak\Desktop\electricalcalculator\Calculator_Front\CalculatorEngine\obj\Debug\CalculatorEngine.csproj.CoreCompileInputs.cache
 C:\Users\odbak\Desktop\electricalcalculator\Calculator_Front\CalculatorEngine\obj\Debug\CalculatorEngine.exe
 C:\Users\odbak\Desktop\electricalcalculator\Calculator_Front\CalculatorEngine\obj\Debug\CalculatorEngine.pdb
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngine\obj\Debug\CalculatorEngine.csprojAssemblyReference.cache
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngine\obj\Debug\CalculatorEngine.Properties.Resources.resources
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngine\obj\Debug\CalculatorEngine.csproj.GenerateResource.cache
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngine\obj\Debug\CalculatorEngine.csproj.CoreCompileInputs.cache
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngine\obj\Debug\CalculatorEngine.exe
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngine\obj\Debug\CalculatorEngine.pdb
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngine\bin\Debug\CalculatorEngine.exe.config
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngine\bin\Debug\CalculatorEngine.exe
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngine\bin\Debug\CalculatorEngine.pdb

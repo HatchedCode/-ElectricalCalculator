@@ -22,3 +22,17 @@ C:\Users\pauld\OneDrive\Desktop\cpts\422\electricalcalculator\Calculator_Front\C
 C:\Users\pauld\OneDrive\Desktop\cpts\422\electricalcalculator\Calculator_Front\Calculator_Front\bin\Debug\CalculatorEngine.exe.config
 C:\Users\pauld\OneDrive\Desktop\cpts\422\electricalcalculator\Calculator_Front\Calculator_Front\obj\Debug\Calculator_Front.csproj.CopyComplete
 C:\Users\pauld\OneDrive\Desktop\cpts\422\electricalcalculator\Calculator_Front\Calculator_Front\bin\Debug\Calculator_Front.pdb
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\Calculator_Front\bin\Debug\Calculator_Front.exe.config
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\Calculator_Front\bin\Debug\Calculator_Front.exe
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\Calculator_Front\bin\Debug\Calculator_Front.pdb
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\Calculator_Front\bin\Debug\CalculatorEngine.exe
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\Calculator_Front\bin\Debug\CalculatorEngine.pdb
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\Calculator_Front\bin\Debug\CalculatorEngine.exe.config
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\Calculator_Front\obj\Debug\Calculator_Front.csprojAssemblyReference.cache
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\Calculator_Front\obj\Debug\Calculator_Front.buttonRParen.resources
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\Calculator_Front\obj\Debug\Calculator_Front.Properties.Resources.resources
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\Calculator_Front\obj\Debug\Calculator_Front.csproj.GenerateResource.cache
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\Calculator_Front\obj\Debug\Calculator_Front.csproj.CoreCompileInputs.cache
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\Calculator_Front\obj\Debug\Calculator_Front.csproj.CopyComplete
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\Calculator_Front\obj\Debug\Calculator_Front.exe
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\Calculator_Front\obj\Debug\Calculator_Front.pdb

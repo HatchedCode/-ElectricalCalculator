@@ -6,34 +6,21 @@ using System.Threading.Tasks;
 
 namespace CptS321
 {
-    class TangentNode : TrigNode
+    internal class TangentNode : TrigNode
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TangentNode"/> class.
         /// Sets the constant value
         /// </summary>
         /// <param name="value">The constant value</param>
-        public TangentNode(double value) : base(value)
+        public TangentNode(double value, char measurement) : base(value, measurement)
         {
-
         }
 
         /// <summary>
         /// Gets the name of tangent
         /// </summary>
-        public static string TrigName => "tan";
-
-        /// <summary>
-        /// Gets and sets the mesurement for the trig function
-        /// </summary>
-        public AngularMeasurement AngleMeasurement
-        {
-            get { return AngleMeasurement; }
-            set
-            {
-                this.AngleMeasurement = value;
-            }
-        }
+        public static char TrigName => 't';
 
         /// <summary>
         /// Evaluates using the built in Sine function.
@@ -41,7 +28,7 @@ namespace CptS321
         /// <returns>Returns the evaluation</returns>
         public override double Evaluate()
         {
-            return this.AngleMeasurement == AngularMeasurement.Rad ? Math.Tan(this.Value) : Math. Tan(ConvertToDegree());
+            return this.AngleMeasurement == 'R' ? Math.Tan(this.Value) : Math. Tan(ConvertToDegree());
         }
     }
 }

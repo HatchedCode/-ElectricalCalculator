@@ -6,29 +6,21 @@ using System.Threading.Tasks;
 
 namespace CptS321
 {
-    class CosecNode : TrigNode
+    internal class CosecNode : TrigNode
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CosecNode"/> class.
         /// Sets the constant value
         /// </summary>
         /// <param name="value">The constant value</param>
-        public CosecNode(double value) : base(value)
+        public CosecNode(double value, char measurement) : base(value, measurement)
         {
-
         }
 
         /// <summary>
-        /// Gets and sets the mesurement for the trig function
+        /// Gets the name of cosine
         /// </summary>
-        public AngularMeasurement angularMeasurement
-        {
-            get { return angularMeasurement; }
-            set
-            {
-                this.angularMeasurement = value;
-            }
-        }
+        public static char TrigName => 'S';
 
         /// <summary>
         /// Evaluates using the built in Sine function.
@@ -36,7 +28,7 @@ namespace CptS321
         /// <returns>Returns the evaluation</returns>
         public override double Evaluate()
         {
-            return this.angularMeasurement == AngularMeasurement.Rad ? (1 / Math.Sin(this.Value)) : (1 / Math.Sin(ConvertToDegree()));
+            return this.AngleMeasurement == 'R' ? (1 / Math.Sin(this.Value)) : (1 / Math.Sin(ConvertToDegree()));
         }
     }
 }

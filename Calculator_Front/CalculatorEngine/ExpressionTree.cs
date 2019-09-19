@@ -87,20 +87,31 @@ namespace CptS321
             {
                 if (char.IsLetter(this.infixexpression[index]))
                 {
-                    string temp = string.Empty;
-                    while (index < this.infixexpression.Length && char.IsLetterOrDigit(this.infixexpression[index]))
-                    {
-                        temp += this.infixexpression[index];
-                        index++;
-                    }
 
-                    index--;
-                    if (!this.variables.ContainsKey(temp))
+                    if(this.treeFactory.IsValidTrigOperator(this.infixexpression[index]))
                     {
-                        this.SetVariable(temp, 0.0);
-                    }
+                        char trigFunctionIdentifier = this.infixexpression[index];
+                        index += 1;
+                        char angleMeasurement = this.infixexpression[index];
 
-                    output.Add(new VariableNode(temp));
+                        index += 1; // we will skip over the '('
+
+                        string temp = string.Empty;
+                        while (index < this.infixexpression.Length && char.IsDigit(this.infixexpression[index]))
+                        {
+                            temp += this.infixexpression[index];
+                            index++;
+                        }
+
+                        if(index < this.infixexpression.Length && this.infixexpression[index] == ')') // Checking to see if it is ')'
+                        {
+                            output.Add(this.treeFactory.CreateTrigOperatorNode(trigFunctionIdentifier, Convert.ToDouble(temp), angleMeasurement));// . Add(new ConstantNode(Convert.ToDouble(temp)));
+                        }
+                        else
+                        {
+                            output.Add(this.treeFactory.CreateTrigOperatorNode(trigFunctionIdentifier, Convert.ToDouble(temp), angleMeasurement));// . Add(new ConstantNode(Convert.ToDouble(temp)));
+                        }
+                    }
                 }
                 else if (char.IsDigit(this.infixexpression[index]))
                 {

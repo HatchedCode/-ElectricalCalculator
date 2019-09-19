@@ -13,27 +13,14 @@ namespace CptS321
         /// Sets the constant value
         /// </summary>
         /// <param name="value">The constant value</param>
-        public SecantNode(double value) : base(value)
+        public SecantNode(double value, char measurement) : base(value, measurement)
         {
-
         }
 
         /// <summary>
         /// Gets the name of secant
         /// </summary>
-        public static string TrigName => "sec";
-
-        /// <summary>
-        /// Gets and sets the mesurement for the trig function
-        /// </summary>
-        public AngularMeasurement AngleMeasurement
-        {
-            get { return AngleMeasurement; }
-            set
-            {
-                this.AngleMeasurement = value;
-            }
-        }
+        public static char TrigName => 'C';
 
         /// <summary>
         /// Evaluates using the built in Sine function.
@@ -41,7 +28,7 @@ namespace CptS321
         /// <returns>Returns the evaluation</returns>
         public override double Evaluate()
         {
-            return this.AngleMeasurement == AngularMeasurement.Rad ? (1 / Math.Cos(this.Value)) : (1 / Math.Cos(ConvertToDegree()));
+            return this.AngleMeasurement == 'R' ? (1 / Math.Cos(this.Value)) : (1 / Math.Cos(ConvertToDegree()));
         }
     }
 }

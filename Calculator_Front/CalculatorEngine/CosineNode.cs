@@ -6,34 +6,23 @@ using System.Threading.Tasks;
 
 namespace CptS321
 {
-    class CosineNode : TrigNode
+    internal class CosineNode : TrigNode
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CosineNode"/> class.
         /// Sets the constant value
         /// </summary>
         /// <param name="value">The constant value</param>
-        public CosineNode(double value) : base(value)
+        public CosineNode(double value, char measurement) : base(value, measurement)
         {
-
         }
 
         /// <summary>
         /// Gets the name of cosine
         /// </summary>
-        public static string TrigName => "cos";
+        public static char TrigName => 'c';
 
-        /// <summary>
-        /// Gets and sets the mesurement for the trig function
-        /// </summary>
-        public AngularMeasurement AngleMeasurement
-        {
-            get { return AngleMeasurement; }
-            set
-            {
-                this.AngleMeasurement = value;
-            }
-        }
 
         /// <summary>
         /// Evaluates using the built in Sine function.
@@ -41,7 +30,7 @@ namespace CptS321
         /// <returns>Returns the evaluation</returns>
         public override double Evaluate()
         {
-            return this.AngleMeasurement == AngularMeasurement.Rad ? Math.Cos(this.Value) : Math.Cos(ConvertToDegree());
+            return this.AngleMeasurement == 'R' ? Math.Cos(this.Value) : Math.Cos(ConvertToDegree());
         }
     }
 }

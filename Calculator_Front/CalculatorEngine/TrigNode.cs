@@ -9,19 +9,31 @@ namespace CptS321
     internal abstract class TrigNode : ExpressionNode
     {
         /// <summary>
+        /// 
+        /// </summary>
+        private char angularmeasurement;
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="TrigNode"/> class.
         /// Sets the constant value
         /// </summary>
         /// <param name="value">The constant value</param>
-        public TrigNode(double value)
+        public TrigNode(double value, char measurement)
         {
             this.Value = value;
+            this.angularmeasurement = measurement;
         }
 
-
-        public enum AngularMeasurement
+        /// <summary>
+        /// Gets and sets the mesurement for the trig function
+        /// </summary>
+        public char AngleMeasurement
         {
-            Deg, Rad
+            get { return this.angularmeasurement; }
+            set
+            {
+                this.angularmeasurement = value;
+            }
         }
 
         /// <summary>
