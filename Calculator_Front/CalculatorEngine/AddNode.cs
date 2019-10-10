@@ -2,7 +2,7 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace CptS321
+namespace CalculatorEngine
 {
     /// <summary>
     /// This class is being used for adding

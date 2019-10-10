@@ -1,11 +1,13 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using CalculatorEngine;
 
-namespace CalculatorEngineTests
+namespace CalculatorEngineTests.TrigNodeTests
 {
     [TestClass]
-    public class TrigNodeTests
+    public class SineNodeTest
     {
+
         [TestMethod]
         public void TestMethod1()
         {

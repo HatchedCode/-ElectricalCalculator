@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CalculatorEngine;
 
 namespace Calculator_Front
 {
@@ -218,7 +219,7 @@ namespace Calculator_Front
             this.Expressions.AddFirst(this.textBox1.Text);
             this.DispExpressions.AddFirst(this.textBox1.Text);
             
-            CptS321.ExpressionTree expression =new CptS321.ExpressionTree(this.Equation);
+            ExpressionTree expression =new ExpressionTree(this.Equation);
            double answer= expression.Evaluate();
    
             this.historyToolStripMenuItem.DropDown.Items.Add(this.textBox1.Text.ToString()+"="+answer.ToString());
