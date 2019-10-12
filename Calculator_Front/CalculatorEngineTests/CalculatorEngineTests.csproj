@@ -30,6 +30,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -67,6 +68,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExpressionTreeTests.cs" />
+    <Compile Include="OperatorNodeTests\TestAdd.cs" />
+    <Compile Include="OperatorNodeTests\TestSubtract.cs" />
+    <Compile Include="OperatorNodeTests\TestMultiply.cs" />
+    <Compile Include="OperatorNodeTests\TestDivide.cs" />
+    <Compile Include="OperatorNodeTests\TestMod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ExpressionTreeFactoryTests.cs" />
     <Compile Include="OperatorNodeTests.cs" />
