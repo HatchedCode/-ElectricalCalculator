@@ -9,6 +9,11 @@ namespace CalculatorEngine
 
     internal class SineNode : TrigNode
     {
+        public SineNode(SineNode @object) : base(@object.Value, @object.AngleMeasurement)
+        {
+            this.Expression = @object.Expression;
+        }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SineNode"/> class.
         /// Sets the constant value
@@ -30,7 +35,7 @@ namespace CalculatorEngine
         /// <returns>Returns the evaluation</returns>
         public override double Evaluate()
         {
-            return this.AngleMeasurement == 'R' ? Math.Sin(this.Value): Math.Round(Math.Sin(this.ConvertToDegree()), 4);
+            return this.AngleMeasurement == 'R' || this.AngleMeasurement == 'r' ? Math.Sin(this.Value): Math.Round(Math.Sin(this.ConvertToDegree()), 4);
         }
 
     }

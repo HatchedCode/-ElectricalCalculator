@@ -10,8 +10,6 @@ C:\Users\pauld\OneDrive\Desktop\cpts\422\electricalcalculator\Calculator_Front\C
 C:\Users\odbak\Desktop\electricalcalculator\Calculator_Front\CalculatorEngine\obj\Debug\CalculatorEngine.csprojAssemblyReference.cache
 C:\Users\odbak\Desktop\electricalcalculator\Calculator_Front\CalculatorEngine\obj\Debug\CalculatorEngine.Properties.Resources.resources
 C:\Users\odbak\Desktop\electricalcalculator\Calculator_Front\CalculatorEngine\obj\Debug\CalculatorEngine.csproj.GenerateResource.cache
-C:\Users\odbak\Desktop\electricalcalculator\Calculator_Front\CalculatorEngine\obj\Debug\CalculatorEngine.csproj.CoreCompileInputs.cache
-C:\Users\odbak\Desktop\electricalcalculator\Calculator_Front\CalculatorEngine\obj\Debug\CalculatorEngine.exe
 C:\Users\odbak\Desktop\electricalcalculator\Calculator_Front\CalculatorEngine\obj\Debug\CalculatorEngine.pdb
 C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngine\obj\Debug\CalculatorEngine.csprojAssemblyReference.cache
 C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngine\obj\Debug\CalculatorEngine.Properties.Resources.resources
@@ -21,3 +19,7 @@ C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEn
 C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngine\bin\Debug\CalculatorEngine.dll.config
 C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngine\bin\Debug\CalculatorEngine.dll
 C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngine\obj\Debug\CalculatorEngine.dll
+C:\Users\odbak\Desktop\electricalcalculator\Calculator_Front\CalculatorEngine\bin\Debug\CalculatorEngine.dll.config
+C:\Users\odbak\Desktop\electricalcalculator\Calculator_Front\CalculatorEngine\bin\Debug\CalculatorEngine.dll
+C:\Users\odbak\Desktop\electricalcalculator\Calculator_Front\CalculatorEngine\bin\Debug\CalculatorEngine.pdb
+C:\Users\odbak\Desktop\electricalcalculator\Calculator_Front\CalculatorEngine\obj\Debug\CalculatorEngine.dll
