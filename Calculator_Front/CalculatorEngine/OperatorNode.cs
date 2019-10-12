@@ -9,6 +9,7 @@ namespace CalculatorEngine
     /// </summary>
     internal abstract class OperatorNode : ExpressionNode
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="OperatorNode"/> class.
         /// Sets the left and right to null
