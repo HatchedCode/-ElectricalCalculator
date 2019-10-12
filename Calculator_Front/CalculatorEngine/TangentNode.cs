@@ -28,7 +28,7 @@ namespace CalculatorEngine
         /// <returns>Returns the evaluation</returns>
         public override double Evaluate()
         {
-            return this.AngleMeasurement == 'R' ? Math.Tan(this.Value) : Math.Round(Math.Tan(ConvertToDegree()), 4);
+            return this.AngleMeasurement == 'R' || this.AngleMeasurement == 'r' ? Math.Tan(this.Value) : Math.Round(Math.Tan(this.ConvertToDegree()), 4);
         }
     }
 }

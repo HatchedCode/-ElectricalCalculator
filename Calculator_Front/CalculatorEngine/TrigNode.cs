@@ -53,6 +53,5 @@ namespace CalculatorEngine
         {
             return (Math.PI / 180) * this.Value;
         }
-
     }
 }

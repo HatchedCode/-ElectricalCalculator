@@ -25,12 +25,12 @@ namespace CalculatorEngine
 
 
         /// <summary>
-        /// Evaluates using the built in Sine function.
+        /// Evaluates using the built in Cosine function.
         /// </summary>
         /// <returns>Returns the evaluation</returns>
         public override double Evaluate()
         {
-            return this.AngleMeasurement == 'R' ? Math.Cos(this.Value) : Math.Round(Math.Cos(this.ConvertToDegree()), 4);
+            return this.AngleMeasurement == 'R' || this.AngleMeasurement == 'r' ? Math.Cos(this.Value) : Math.Round(Math.Cos(this.ConvertToDegree()), 4);
         }
     }
 }

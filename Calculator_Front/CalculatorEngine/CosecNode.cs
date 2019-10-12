@@ -28,7 +28,7 @@ namespace CalculatorEngine
         /// <returns>Returns the evaluation</returns>
         public override double Evaluate()
         {
-            return this.AngleMeasurement == 'R' ? (1 / Math.Sin(this.Value)) : Math.Round((1 / Math.Sin(ConvertToDegree())), 4);
+            return this.AngleMeasurement == 'R' || this.AngleMeasurement == 'r' ? (1 / Math.Sin(this.Value)) : Math.Round((1 / Math.Round(Math.Sin(this.ConvertToDegree()), 9)), 4);
         }
     }
 }
