@@ -70,13 +70,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ExpressionTreeFactoryTests.cs" />
     <Compile Include="OperatorNodeTests.cs" />
-    <Compile Include="ConstantVariableNodeTests.cs" />
+    <Compile Include="VariableConstantNodeTests\VariableNodeTests.cs" />
     <Compile Include="TrigNodeTests\SineNodeTests.cs" />
     <Compile Include="TrigNodeTests\CosineNodeTests.cs" />
     <Compile Include="TrigNodeTests\CosecNodeTests.cs" />
     <Compile Include="TrigNodeTests\SecantNodeTests.cs" />
     <Compile Include="TrigNodeTests\TangentNodeTests.cs" />
     <Compile Include="TrigNodeTests\CotanNodeTests.cs" />
+    <Compile Include="VariableConstantNodeTests\ConstantNodeTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
