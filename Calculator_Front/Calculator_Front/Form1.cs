@@ -219,7 +219,7 @@ namespace Calculator_Front
             this.Expressions.AddFirst(this.textBox1.Text);
             this.DispExpressions.AddFirst(this.textBox1.Text);
             
-            ExpressionTree expression =new ExpressionTree(this.Equation);
+            ExpressionTree expression = new ExpressionTree(this.Equation);
            double answer= expression.Evaluate();
    
             this.historyToolStripMenuItem.DropDown.Items.Add(this.textBox1.Text.ToString()+"="+answer.ToString());

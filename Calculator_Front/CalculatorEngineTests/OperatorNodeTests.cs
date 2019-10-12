@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace CptS321
+namespace CalculatorEngineTests
 {
     [TestClass]
     public class OperatorNodeTests
