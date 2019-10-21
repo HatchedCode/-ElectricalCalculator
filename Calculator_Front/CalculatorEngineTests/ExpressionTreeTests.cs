@@ -94,6 +94,53 @@ namespace CalculatorEngineTests
             Assert.IsTrue(postfixList[2] is AddNode);
         }
 
+        [TestMethod]
+        public void TestConstructor()
+        {
+            ExpressionTree tree = new ExpressionTree("20+1");
 
+            PrivateObject privateTree = new PrivateObject(tree);
+
+            var ret = privateTree.GetField("infixexpression");
+            Assert.AreEqual("20+1", ret);
+        }
+
+        [TestMethod]
+        public void TestSetVariable()
+        {
+            ExpressionTree tree = new ExpressionTree("20+1");
+
+            tree.SetVariable("hello", 100);
+            tree.SetVariable("World", 200);
+            PrivateObject privateTree = new PrivateObject(tree);
+
+
+            var ret = privateTree.GetField("variables");
+            System.Collections.Generic.Dictionary<string, double> vars = (System.Collections.Generic.Dictionary<string, double>)ret;
+           
+            Assert.AreEqual(100, vars["hello"]);
+            Assert.AreEqual(200, vars["World"]);
+
+        
+        }
+
+        [TestMethod]
+        public void TestGetVariableNames()
+        {
+            ExpressionTree tree = new ExpressionTree("20+1");
+            System.Collections.Generic.Dictionary<string, double> vars = new System.Collections.Generic.Dictionary<string, double>();
+            vars["hello"] = 100;
+            vars["world"] = 200;
+            
+
+            PrivateObject privateTree = new PrivateObject(tree);
+            privateTree.SetField("variables", vars);
+
+            string[] ret = tree.GetVariableNames();
+            Assert.AreEqual("hello", ret[0]);
+            Assert.AreEqual("world", ret[1]);
+
+
+        }
     }
 }
