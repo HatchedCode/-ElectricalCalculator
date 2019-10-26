@@ -80,3 +80,31 @@ C:\Users\Marco Arceo\OneDrive\Documents\College Information\Senior Year\Fall Sem
 C:\Users\Marco Arceo\OneDrive\Documents\College Information\Senior Year\Fall Semester\CptS 422\master\Calculator_Front\CalculatorEngineTests\obj\Debug\CalculatorEngineTests.csproj.CopyComplete
 C:\Users\Marco Arceo\OneDrive\Documents\College Information\Senior Year\Fall Semester\CptS 422\master\Calculator_Front\CalculatorEngineTests\obj\Debug\CalculatorEngineTests.dll
 C:\Users\Marco Arceo\OneDrive\Documents\College Information\Senior Year\Fall Semester\CptS 422\master\Calculator_Front\CalculatorEngineTests\obj\Debug\CalculatorEngineTests.pdb
+C:\Users\pauld\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\pauld\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\pauld\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\pauld\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineTests\bin\Debug\CalculatorEngineTests.dll
+C:\Users\pauld\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineTests\bin\Debug\CalculatorEngineTests.pdb
+C:\Users\pauld\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineTests\bin\Debug\CalculatorEngine.dll
+C:\Users\pauld\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineTests\bin\Debug\Castle.Core.dll
+C:\Users\pauld\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\pauld\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\pauld\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineTests\bin\Debug\Moq.dll
+C:\Users\pauld\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineTests\bin\Debug\nunit.framework.dll
+C:\Users\pauld\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineTests\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\pauld\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineTests\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\pauld\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineTests\bin\Debug\CalculatorEngine.pdb
+C:\Users\pauld\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineTests\bin\Debug\CalculatorEngine.dll.config
+C:\Users\pauld\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineTests\bin\Debug\Castle.Core.xml
+C:\Users\pauld\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\pauld\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\pauld\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineTests\bin\Debug\Moq.xml
+C:\Users\pauld\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineTests\bin\Debug\nunit.framework.pdb
+C:\Users\pauld\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineTests\bin\Debug\nunit.framework.xml
+C:\Users\pauld\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineTests\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\pauld\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineTests\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\pauld\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineTests\obj\Debug\CalculatorEngineTests.csprojAssemblyReference.cache
+C:\Users\pauld\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineTests\obj\Debug\CalculatorEngineTests.csproj.CoreCompileInputs.cache
+C:\Users\pauld\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineTests\obj\Debug\CalculatorEngineTests.csproj.CopyComplete
+C:\Users\pauld\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineTests\obj\Debug\CalculatorEngineTests.dll
+C:\Users\pauld\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineTests\obj\Debug\CalculatorEngineTests.pdb

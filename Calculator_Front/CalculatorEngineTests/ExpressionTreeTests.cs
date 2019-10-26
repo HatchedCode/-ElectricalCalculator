@@ -37,9 +37,100 @@ namespace CalculatorEngineTests
         [TestMethod]
         public void TestPublicEvaluate()
         {
-            ExpressionTree tree = new ExpressionTree("20+1");
 
-            Assert.AreEqual(tree.Evaluate(), 21);
+            //testing addition
+            ExpressionTree tree = new ExpressionTree("20+1");
+            Assert.AreEqual(21, tree.Evaluate());
+            ////Negatives do not work(needs to be fixed
+                //negative input
+            //tree = new ExpressionTree("20+n1");
+           // Assert.AreEqual( 19, tree.Evaluate());
+                //negative answer
+            //tree = new ExpressionTree("n20+1");
+            //Assert.AreEqual( -19, tree.Evaluate());
+
+
+
+            //testing multiplication
+            tree = new ExpressionTree("21*11");
+            Assert.AreEqual( 231, tree.Evaluate());
+            //testing division
+                //int
+            tree = new ExpressionTree("14/2");
+            Assert.AreEqual( 7, tree.Evaluate());
+            //double
+            //tree = new ExpressionTree("14/3");
+            //Assert.AreEqual(tree.Evaluate(), 14/3);
+
+            //testing subtraction
+                //positive
+            tree = new ExpressionTree("14-2");
+            Assert.AreEqual( 12, tree.Evaluate());
+                //negative
+            tree = new ExpressionTree("2-12");
+            Assert.AreEqual( -10, tree.Evaluate());
+
+            //testing cos,
+                //Rad
+            tree = new ExpressionTree("cR(0)");
+            Assert.AreEqual( 1, tree.Evaluate());
+                //Deg
+            tree = new ExpressionTree("cD(90)");
+            Assert.AreEqual( 0, tree.Evaluate());
+
+            //testing sin
+                //Rad
+            tree = new ExpressionTree("sR(0)");
+            Assert.AreEqual( 0, tree.Evaluate());
+                //Deg
+            tree = new ExpressionTree("sD(90)");
+            Assert.AreEqual( 1, tree.Evaluate());
+
+            //testing tan
+                //Rad
+            tree = new ExpressionTree("tR(0)");
+            Assert.AreEqual( 0, tree.Evaluate());
+                //Deg
+            tree = new ExpressionTree("tD(45)");
+            Assert.AreEqual( 1, tree.Evaluate());
+
+            //testing csc
+                //Rad
+            tree = new ExpressionTree("SR(1)");
+            Assert.AreEqual(1.1883951057781212d, tree.Evaluate());
+                //Deg
+            tree = new ExpressionTree("SD(45)");
+            Assert.AreEqual(1.4141999999999999d, tree.Evaluate());
+
+            //testing sec
+                //Rad
+            tree = new ExpressionTree("CR(0)");
+            Assert.AreEqual(1, tree.Evaluate());
+                //Deg
+            tree = new ExpressionTree("CD(45)");
+            Assert.AreEqual(1.4141999999999999d, tree.Evaluate());
+
+
+            //testing cot
+            //Rad
+            tree = new ExpressionTree("TR(3.14)");
+            Assert.AreEqual(14, tree.Evaluate());
+            //Deg
+            tree = new ExpressionTree("TD(45)");
+            Assert.AreEqual(1, tree.Evaluate());
+
+            //testing mod
+            tree = new ExpressionTree("10%3");
+            Assert.AreEqual(1, tree.Evaluate());
+            tree = new ExpressionTree("10%2");
+            Assert.AreEqual(0, tree.Evaluate());
+
+            //tesiting paren
+            tree = new ExpressionTree("100+(2*4)*2");
+            Assert.AreEqual(116, tree.Evaluate());
+
+
+            //....
 
         }
 
@@ -64,14 +155,17 @@ namespace CalculatorEngineTests
             //checks to see if Left is Constant Node
             Assert.IsTrue(temp.Left is ConstantNode);
             ConstantNode Left = (ConstantNode)temp.Left;
-            //checks if Left is 20
+            //checks if Left is 1
             Assert.AreEqual(Left.Value, 1);
             
             //checks if Right is a constant Node
             Assert.IsTrue(temp.Right is ConstantNode);
             ConstantNode Right = (ConstantNode)temp.Right;
-            //checks if Right is 1
+            //checks if Right is 20
             Assert.AreEqual(Right.Value, 20);
+
+
+
 
         }
 
@@ -103,6 +197,13 @@ namespace CalculatorEngineTests
 
             var ret = privateTree.GetField("infixexpression");
             Assert.AreEqual("20+1", ret);
+
+            tree = new ExpressionTree("");
+
+            PrivateObject privateTreeEmpty = new PrivateObject(tree);
+
+             ret = privateTreeEmpty.GetField("infixexpression");
+            Assert.AreEqual("", ret);
         }
 
         [TestMethod]
@@ -131,11 +232,15 @@ namespace CalculatorEngineTests
             System.Collections.Generic.Dictionary<string, double> vars = new System.Collections.Generic.Dictionary<string, double>();
             vars["hello"] = 100;
             vars["world"] = 200;
-            
 
+            //checks empty dicionary
+            Assert.AreEqual(0, tree.GetVariableNames().Length);
+
+            //sets Dictionary
             PrivateObject privateTree = new PrivateObject(tree);
             privateTree.SetField("variables", vars);
 
+            //checks non empty tree
             string[] ret = tree.GetVariableNames();
             Assert.AreEqual("hello", ret[0]);
             Assert.AreEqual("world", ret[1]);
