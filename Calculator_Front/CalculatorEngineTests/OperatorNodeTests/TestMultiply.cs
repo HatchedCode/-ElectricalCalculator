@@ -15,10 +15,33 @@ namespace CalculatorEngineTests.OperatorNodeTests
         [TestMethod]
         public void MultiplyingTwoIntegers()
         {
-            this.tMultiplyNode = new MultiplyNode();
-
             ExpressionNode newLeft = new ConstantNode(12);
             ExpressionNode newRight = new ConstantNode(12);
+
+            ExpressionNode tempnewLeft = new ConstantNode(1);
+            ExpressionNode tempnewRight = new ConstantNode(1);
+
+            Mock<AddNode> obj = new Mock<AddNode>();
+
+
+            ExpressionNode left = new AddNode();
+            (left as AddNode).Left = tempnewLeft;
+            (left as AddNode).Right = tempnewLeft;
+
+
+            ExpressionNode right = new MultiplyNode();
+            (right as MultiplyNode).Left = newLeft;
+            (right as MultiplyNode).Right = newLeft;
+
+            obj.Object.Left = left;
+            obj.Object.Right = right;
+
+            obj.Object.Evaluate();
+
+            obj.Verify(mock => mock.Evaluate(), Times.Exactly(1));
+
+
+            this.tMultiplyNode = new MultiplyNode();
 
             this.tMultiplyNode.Left = newLeft;
             this.tMultiplyNode.Right = newRight;

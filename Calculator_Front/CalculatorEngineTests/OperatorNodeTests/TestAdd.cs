@@ -15,10 +15,24 @@ namespace CalculatorEngineTests.OperatorNodeTests
         [TestMethod]
         public void AddingTwoIntegers()
         {
+            Mock<AddNode> obj = new Mock<AddNode>();
+            
+            
             this.tAddNode = new AddNode();
 
             ExpressionNode newLeft = new ConstantNode(1972);
             ExpressionNode newRight = new ConstantNode(28);
+
+            obj.Object.Left = newLeft;
+            obj.Object.Left = newRight;
+
+            obj.Object.Evaluate();
+            obj.Object.Evaluate();
+            obj.Object.Evaluate();
+
+            obj.Verify(mock => mock.Evaluate(), Times.Exactly(3));
+
+
 
             this.tAddNode.Left = newLeft;
             this.tAddNode.Right = newRight;
