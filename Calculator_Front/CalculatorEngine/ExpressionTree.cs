@@ -55,6 +55,8 @@ namespace CalculatorEngine
             this.variables[variableName] = variableValue;
         }
 
+        internal ExpressionTreeFactory Expressiontreefactory => this.treeFactory;
+
         /// <summary>
         /// Gets the names of the variables in the expression tree
         /// </summary>
@@ -105,11 +107,11 @@ namespace CalculatorEngine
 
                         if(index < this.infixexpression.Length && this.infixexpression[index] == ')') // Checking to see if it is ')'
                         {
-                            output.Add(this.treeFactory.CreateTrigOperatorNode(trigFunctionIdentifier, Convert.ToDouble(temp), angleMeasurement));// . Add(new ConstantNode(Convert.ToDouble(temp)));
+                            output.Add(this.treeFactory.CreateTrigOperatorNode(trigFunctionIdentifier, Convert.ToDouble(temp), angleMeasurement));
                         }
                         else
                         {
-                            output.Add(this.treeFactory.CreateTrigOperatorNode(trigFunctionIdentifier, Convert.ToDouble(temp), angleMeasurement));// . Add(new ConstantNode(Convert.ToDouble(temp)));
+                            output.Add(this.treeFactory.CreateTrigOperatorNode(trigFunctionIdentifier, Convert.ToDouble(temp), angleMeasurement));
                         }
                     }
                 }
