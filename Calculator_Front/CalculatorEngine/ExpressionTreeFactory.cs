@@ -12,7 +12,7 @@ namespace CalculatorEngine
     /// <summary>
     /// In charge of the dirty work
     /// </summary>
-    internal class ExpressionTreeFactory
+    public class ExpressionTreeFactory
     {
         /// <summary>
         /// A dictionary for the new operators

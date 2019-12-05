@@ -13,6 +13,60 @@ namespace CalculatorEngineIntegrationTests
 {
     public class IntegrationTests
     {
+        public static double IntegrateEvaluatewithInterface()
+        {
+            Mock<IExpressionTree> mTree = new Mock<IExpressionTree>(MockBehavior.Strict);
+
+            //Setup
+            mTree.Setup(i => i.Evaluate()).Returns(12);
+
+            mTree.Setup(i => i.ShuntingYardAlgorithm()).Returns(new List<ExpressionNode>());
+
+            mTree.Setup(i => i.GetFactory().CreateOperatorNode(It.IsAny<char>())).Returns(It.IsAny<OperatorNode>());
+            mTree.Setup(i => i.GetFactory().IsValidOperator(It.IsAny<char>())).Returns(It.IsAny<bool>());
+
+            mTree.Setup(i => i.GetFactory().CreateTrigOperatorNode(It.IsAny<char>(), It.IsAny<double>(), It.IsAny<char>())).Returns(It.IsAny<TrigNode>());
+            mTree.Setup(i => i.GetFactory().IsValidTrigOperator(It.IsAny<char>())).Returns(It.IsAny<bool>());
+
+            mTree.Setup(i => i.GetFactory().IsHigherPrecedence(It.IsAny<char>(), It.IsAny<char>())).Returns(It.IsAny<bool>);
+
+            mTree.Setup(i => i.ConstructTree(It.IsAny<List<ExpressionNode>>())).Returns(new ConstantNode(5));
+            mTree.Setup(i => i.Evaluate(It.IsAny<ExpressionNode>())).Returns(12);
+
+            var treeUnderTest = new Evaluator(mTree.Object);
+
+            double results = treeUnderTest.Evaluate();
+
+            return results;
+        }
+
+        public static double IntegrateShuntingYardwithInterface()
+        {
+            Mock<IExpressionTree> mTree = new Mock<IExpressionTree>(MockBehavior.Strict);
+
+            //Setup
+            //mTree.Setup(i => i.Evaluate()).Returns(12);
+
+            mTree.Setup(i => i.ShuntingYardAlgorithm()).Returns(new List<ExpressionNode>());
+
+            mTree.Setup(i => i.GetFactory().CreateOperatorNode(It.IsAny<char>())).Returns(It.IsAny<OperatorNode>());
+            mTree.Setup(i => i.GetFactory().IsValidOperator(It.IsAny<char>())).Returns(It.IsAny<bool>());
+
+            mTree.Setup(i => i.GetFactory().CreateTrigOperatorNode(It.IsAny<char>(), It.IsAny<double>(), It.IsAny<char>())).Returns(It.IsAny<TrigNode>());
+            mTree.Setup(i => i.GetFactory().IsValidTrigOperator(It.IsAny<char>())).Returns(It.IsAny<bool>());
+
+            mTree.Setup(i => i.GetFactory().IsHigherPrecedence(It.IsAny<char>(), It.IsAny<char>())).Returns(It.IsAny<bool>);
+
+            mTree.Setup(i => i.ConstructTree(It.IsAny<List<ExpressionNode>>())).Returns(new ConstantNode(5));
+            mTree.Setup(i => i.Evaluate(It.IsAny<ExpressionNode>())).Returns(12);
+
+            var treeUnderTest = new Evaluator(mTree.Object);
+
+            double results = treeUnderTest.Evaluate();
+
+            return results;
+        }
+
         public static double IntegrateEvaluate()
         {
             //Mock object
@@ -57,7 +111,7 @@ namespace CalculatorEngineIntegrationTests
 
             mTree.Setup(_ => _.ConstructTree(It.IsAny<List<ExpressionNode>>())).Returns(new ConstantNode(5));
             mTree.Setup(_ => _.Evaluate(It.IsAny<ExpressionNode>())).Returns(5);
-            mTree.Setup(_ => _.Root.Evaluate()).Returns(5);
+            mTree.Setup(_ => _.GetRoot().Evaluate()).Returns(5);
 
             double result = mTree.Object.Evaluate();
 
@@ -84,7 +138,7 @@ namespace CalculatorEngineIntegrationTests
 
 //            mTree.Setup(_ => _.ConstructTree(It.IsAny<List<ExpressionNode>>())).Returns(new ConstantNode(5));
             mTree.Setup(_ => _.Evaluate(It.IsAny<ExpressionNode>())).Returns(5);
-            mTree.Setup(_ => _.Root.Evaluate()).Returns(5);
+            mTree.Setup(_ => _.GetRoot().Evaluate()).Returns(5);
 
             double result = mTree.Object.Evaluate();
 
@@ -110,7 +164,7 @@ namespace CalculatorEngineIntegrationTests
 
             //            mTree.Setup(_ => _.ConstructTree(It.IsAny<List<ExpressionNode>>())).Returns(new ConstantNode(5));
 //            mTree.Setup(_ => _.Evaluate(It.IsAny<ExpressionNode>())).Returns(5);
-            mTree.Setup(_ => _.Root.Evaluate()).Returns(5);
+            mTree.Setup(_ => _.GetRoot().Evaluate()).Returns(5);
 
             double result = mTree.Object.Evaluate();
 
@@ -136,7 +190,7 @@ namespace CalculatorEngineIntegrationTests
 
             //            mTree.Setup(_ => _.ConstructTree(It.IsAny<List<ExpressionNode>>())).Returns(new ConstantNode(5));
             //mTree.Setup(_ => _.Evaluate(It.IsAny<ExpressionNode>())).Returns(5);
-            mTree.Setup(_ => _.Root.Evaluate()).Returns(5);
+            mTree.Setup(_ => _.GetRoot().Evaluate()).Returns(5);
 
             double result = mTree.Object.Evaluate();
 
@@ -163,7 +217,7 @@ namespace CalculatorEngineIntegrationTests
 
             //            mTree.Setup(_ => _.ConstructTree(It.IsAny<List<ExpressionNode>>())).Returns(new ConstantNode(5));
             //mTree.Setup(_ => _.Evaluate(It.IsAny<ExpressionNode>())).Returns(5);
-            mTree.Setup(_ => _.Root.Evaluate()).Returns(5);
+            mTree.Setup(_ => _.GetRoot().Evaluate()).Returns(5);
 
             double result = mTree.Object.Evaluate();
 
@@ -190,7 +244,7 @@ namespace CalculatorEngineIntegrationTests
 
             //            mTree.Setup(_ => _.ConstructTree(It.IsAny<List<ExpressionNode>>())).Returns(new ConstantNode(5));
             //mTree.Setup(_ => _.Evaluate(It.IsAny<ExpressionNode>())).Returns(5);
-            mTree.Setup(_ => _.Root.Evaluate()).Returns(5);
+            mTree.Setup(_ => _.GetRoot().Evaluate()).Returns(5);
 
             double result = mTree.Object.Evaluate();
 
@@ -217,7 +271,7 @@ namespace CalculatorEngineIntegrationTests
 
             //            mTree.Setup(_ => _.ConstructTree(It.IsAny<List<ExpressionNode>>())).Returns(new ConstantNode(5));
             //mTree.Setup(_ => _.Evaluate(It.IsAny<ExpressionNode>())).Returns(5);
-            mTree.Setup(_ => _.Root.Evaluate()).Returns(5);
+            mTree.Setup(_ => _.GetRoot().Evaluate()).Returns(5);
 
             double result = mTree.Object.Evaluate();
 
@@ -243,7 +297,7 @@ namespace CalculatorEngineIntegrationTests
 
             //            mTree.Setup(_ => _.ConstructTree(It.IsAny<List<ExpressionNode>>())).Returns(new ConstantNode(5));
             //mTree.Setup(_ => _.Evaluate(It.IsAny<ExpressionNode>())).Returns(5);
-            mTree.Setup(_ => _.Root.Evaluate()).Returns(5);
+            mTree.Setup(_ => _.GetRoot().Evaluate()).Returns(5);
 
             double result = mTree.Object.Evaluate();
 
@@ -269,7 +323,7 @@ namespace CalculatorEngineIntegrationTests
 
             //            mTree.Setup(_ => _.ConstructTree(It.IsAny<List<ExpressionNode>>())).Returns(new ConstantNode(5));
             //mTree.Setup(_ => _.Evaluate(It.IsAny<ExpressionNode>())).Returns(5);
-            //mTree.Setup(_ => _.Root.Evaluate()).Returns(5);
+            //mTree.Setup(_ => _.GetRoot().Evaluate()).Returns(5);
 
             double result = mTree.Object.Evaluate();
             ExpressionTree tree = mTree.Object;

@@ -19,3 +19,24 @@ C:\Users\odbak\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineInt
 C:\Users\odbak\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineIntegrationTests\obj\Debug\CalculatorEngineIntegrationTests.csproj.CopyComplete
 C:\Users\odbak\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineIntegrationTests\obj\Debug\CalculatorEngineIntegrationTests.exe
 C:\Users\odbak\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineIntegrationTests\obj\Debug\CalculatorEngineIntegrationTests.pdb
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineIntegrationTests\obj\Debug\CalculatorEngineIntegrationTests.csprojAssemblyReference.cache
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineIntegrationTests\obj\Debug\CalculatorEngineIntegrationTests.exe
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineIntegrationTests\obj\Debug\CalculatorEngineIntegrationTests.pdb
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineIntegrationTests\bin\Debug\CalculatorEngineIntegrationTests.exe.config
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineIntegrationTests\bin\Debug\CalculatorEngineIntegrationTests.exe
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineIntegrationTests\bin\Debug\CalculatorEngineIntegrationTests.pdb
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineIntegrationTests\bin\Debug\CalculatorEngine.dll
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineIntegrationTests\bin\Debug\Castle.Core.dll
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineIntegrationTests\bin\Debug\Moq.dll
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineIntegrationTests\bin\Debug\nunit.framework.dll
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineIntegrationTests\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineIntegrationTests\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineIntegrationTests\bin\Debug\CalculatorEngine.pdb
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineIntegrationTests\bin\Debug\CalculatorEngine.dll.config
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineIntegrationTests\bin\Debug\Castle.Core.xml
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineIntegrationTests\bin\Debug\Moq.xml
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineIntegrationTests\bin\Debug\nunit.framework.pdb
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineIntegrationTests\bin\Debug\nunit.framework.xml
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineIntegrationTests\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineIntegrationTests\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Osman Bakari\Desktop\electricalcalculator\Calculator_Front\CalculatorEngineIntegrationTests\obj\Debug\CalculatorEngineIntegrationTests.csproj.CopyComplete

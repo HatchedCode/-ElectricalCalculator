@@ -17,15 +17,69 @@ namespace CalculatorEngine
         public List<ExpressionNode> ShuntingYardAlgorithm();
         public double Evaluate(ExpressionNode theNode);
         public ExpressionNode ConstructTree(List<ExpressionNode> postfix);
+        public ExpressionNode GetRoot();
+        public ExpressionTreeFactory GetFactory();
 
     }
 
+    public class Evaluator
+    {
+        private IExpressionTree _expressionTree;
+
+        public Evaluator(IExpressionTree tree)
+        {
+            this._expressionTree = tree;
+        }
+
+        public void SetVariable(string variableName, double variableValue)
+        {
+            this._expressionTree.SetVariable(variableName, variableValue);
+        }
+
+        public string[] GetVariableNames()
+        {
+            return this._expressionTree.GetVariableNames();
+        }
+
+        public double Evaluate()
+        {
+            return this._expressionTree.Evaluate();
+        }
+
+        public List<ExpressionNode> ShuntingYardAlgorithm()
+        {
+            return this._expressionTree.ShuntingYardAlgorithm();
+        }
+
+        public double Evaluate(ExpressionNode theNode)
+        {
+            return this._expressionTree.Evaluate(theNode);
+        }
+
+        public ExpressionNode ConstructTree(List<ExpressionNode> postfix)
+        {
+            return this._expressionTree.ConstructTree(postfix);
+        }
+
+        public ExpressionNode GetRoot()
+        {
+            return this._expressionTree.GetRoot();
+        }
+
+        public ExpressionTreeFactory GetFactory()
+        {
+            return this._expressionTree.GetFactory();
+        }
+
+    }
 
     /// <summary>
     /// The expression tree program
     /// </summary>
     public class ExpressionTree : IExpressionTree
     {
+        //Copy constructor
+        
         /// <summary>
         /// The root of the tree
         /// </summary>
@@ -58,25 +112,38 @@ namespace CalculatorEngine
         /// <param name="expression">Expression to construct the tree.</param>
         public ExpressionTree(string expression) => this.infixexpression = expression;
 
+/*        public ExpressionTree()
+        {
+            this.infixexpression = "";
+        }*/
+
         /// <summary>
         /// Makes the variable node
         /// </summary>
         /// <param name="variableName">The name</param>
         /// <param name="variableValue">The value</param>
-        public virtual void SetVariable(string variableName, double variableValue)
+        public void SetVariable(string variableName, double variableValue)
         {
             this.variables[variableName] = variableValue;
         }
 
-        internal virtual ExpressionTreeFactory Expressiontreefactory => this.treeFactory;
+        internal ExpressionTreeFactory Expressiontreefactory => this.treeFactory;
 
-        internal virtual ExpressionNode Root => this.root;
+        public ExpressionTreeFactory GetFactory()
+        {
+            return this.treeFactory;
+        }
+
+        public ExpressionNode GetRoot()
+        {
+            return this.root;
+        }
 
         /// <summary>
         /// Gets the names of the variables in the expression tree
         /// </summary>
         /// <returns></returns>
-        public virtual string[] GetVariableNames()
+        public string[] GetVariableNames()
         {
                 return this.variables.Keys.ToArray();
         }
@@ -85,7 +152,7 @@ namespace CalculatorEngine
         /// Evaluates the expression
         /// </summary>
         /// <returns>A number</returns>
-        public virtual double Evaluate()
+        public double Evaluate()
         {
             this.root = this.ConstructTree(this.ShuntingYardAlgorithm());
             return this.Evaluate(this.root);
@@ -95,7 +162,7 @@ namespace CalculatorEngine
         /// Converts to a postfix; Worked on it in class with Osman Bakari and copied it from the class demo
         /// </summary>
         /// <returns>A postfix expression node list</returns>
-        public virtual List<ExpressionNode> ShuntingYardAlgorithm()
+        public List<ExpressionNode> ShuntingYardAlgorithm()
         {
             Stack<char> stack = new Stack<char>();
             List<ExpressionNode> output = new List<ExpressionNode>();
@@ -182,7 +249,7 @@ namespace CalculatorEngine
         /// </summary>
         /// <param name="theNode">The current nodes</param>
         /// <returns>An evaluation</returns>
-        public virtual double Evaluate(ExpressionNode theNode)
+        public double Evaluate(ExpressionNode theNode)
         {
             double temp = theNode.Evaluate();
             return temp;
@@ -193,7 +260,7 @@ namespace CalculatorEngine
         /// </summary>
         /// <param name="postfix">The string being used</param>
         /// <returns>A expression tree</returns>
-        public virtual ExpressionNode ConstructTree(List<ExpressionNode> postfix)
+        public ExpressionNode ConstructTree(List<ExpressionNode> postfix)
         {
             Stack<ExpressionNode> stackNodes = new Stack<ExpressionNode>();
 

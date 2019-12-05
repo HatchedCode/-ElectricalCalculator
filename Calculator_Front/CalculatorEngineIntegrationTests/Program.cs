@@ -17,6 +17,14 @@ namespace CalculatorEngineIntegrationTests
 
             Console.WriteLine("Starting Integration Testing\n");
             Console.WriteLine("-----------------------------------------------------------------------------------------------------------------\n");
+            result = IntegrationTests.IntegrateEvaluatewithInterface();
+            expected = 12;
+            Console.WriteLine("Step 0: Integrate with Interface Body Evaluate: E={0} R={1} = {2}\n", expected, result, expected == result);
+
+            result = IntegrationTests.IntegrateShuntingYardwithInterface();
+            expected = 12;
+            Console.WriteLine("Step 0: Integrate with Interface Body ShuntingYard: E={0} R={1} = {2}\n", expected, result, expected == result);
+
             result = IntegrationTests.IntegrateEvaluate();
             expected = 12;
             Console.WriteLine("Step 0: Integrate Evaluate: E={0} R={1} = {2}\n",expected, result, expected == result);
