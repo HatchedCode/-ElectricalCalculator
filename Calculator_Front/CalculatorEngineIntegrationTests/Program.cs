@@ -11,22 +11,59 @@ namespace CalculatorEngineIntegrationTests
 {
     class Program
     {
-        //private static IntegrationTests tests = new IntegrationTests();
         static void Main(string[] args)
         {
-            Console.WriteLine("IntegrateEvaluate = {0}\n", IntegrateEvalutate() == 5);
-        }
+            double result = 0, expected = 0;
 
-        public static  double IntegrateEvalutate()
-        {
-            ExpressionTree tree = new ExpressionTree("5");
-            Mock<ExpressionTree> mTree = new Mock<ExpressionTree>("5");
+            Console.WriteLine("Starting Integration Testing\n");
+            Console.WriteLine("-----------------------------------------------------------------------------------------------------------------\n");
+            result = IntegrationTests.IntegrateEvaluate();
+            expected = 12;
+            Console.WriteLine("Step 0: Integrate Evaluate: E={0} R={1} = {2}\n",expected, result, expected == result);
 
-            //https://stackoverflow.com/questions/56905578/moq-non-overridable-members-may-not-be-used-in-setup-verification-expression
-            mTree.Setup(m => m.Evaluate()).Returns(5);
+            result = IntegrationTests.IntegrateShuntingYard();
+            expected = 5;
+            Console.WriteLine("Step 1: Integrate ShuntingYardAlgorithm: E={0} R={1} = {2}\n", expected, result, expected == result);
 
-            //Call the method
-            return mTree.Object.Evaluate();
+            result = IntegrationTests.IntegrateConstructTree();
+            expected = 5;
+            Console.WriteLine("Step 2: Integrate ConstructTree: E={0} R={1} = {2}\n", expected, result, expected == result);
+
+
+
+            result = IntegrationTests.IntegrateExpressionEvaluate();
+            expected = 12;
+            Console.WriteLine("Step 3: Integrate Evaluate: E={0} R={1} = {2}\n", expected, result, expected == result);
+
+            result = IntegrationTests.IntegrateIsValidTrigOperator();
+            expected = 5;
+            Console.WriteLine("Step 4: Integrate ShuntingYardAlgorithm: E={0} R={1} = {2}\n", expected, result, expected == result);
+
+            result = IntegrationTests.IntegrateCreateTrigOperatorNode();
+            expected = 5;
+            Console.WriteLine("Step 5: Integrate ConstructTree: E={0} R={1} = {2}\n", expected, result, expected == result);
+
+
+
+            result = IntegrationTests.IntegrateIsValidOperator();
+            expected = 12;
+            Console.WriteLine("Step 6: Integrate Evaluate: E={0} R={1} = {2}\n", expected, result, expected == result);
+
+            result = IntegrationTests.IntegrateCreateOperatorNode();
+            expected = 5;
+            Console.WriteLine("Step 7: Integrate ShuntingYardAlgorithm: E={0} R={1} = {2}\n", expected, result, expected == result);
+
+            result = IntegrationTests.IntegrateIsHigherPrecedence();
+            expected = 5;
+            Console.WriteLine("Step 8: Integrate ConstructTree: E={0} R={1} = {2}\n", expected, result, expected == result);
+
+
+            result = IntegrationTests.IntegrateEvaluateEvaluate();
+            expected = 12;
+            Console.WriteLine("Step 9: Integrate Evaluate: E={0} R={1} = {2}\n", expected, result, expected == result);
+
+            Console.WriteLine("-----------------------------------------------------------------------------------------------------------------\n");
+            Console.WriteLine("Finished integration testing\n");
         }
     }
 }

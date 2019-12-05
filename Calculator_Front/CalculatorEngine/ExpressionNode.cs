@@ -7,7 +7,7 @@ namespace CalculatorEngine
     /// <summary>
     /// The main expression node
     /// </summary>
-    internal abstract class ExpressionNode
+    public abstract class ExpressionNode
     {
         /// <summary>
         /// Forces for evaluations

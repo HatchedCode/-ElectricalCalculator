@@ -7,7 +7,7 @@ namespace CalculatorEngine
     /// <summary>
     /// The operator node
     /// </summary>
-    internal abstract class OperatorNode : ExpressionNode
+    public abstract class OperatorNode : ExpressionNode
     {
 
         /// <summary>

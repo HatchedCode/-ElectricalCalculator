@@ -52,7 +52,7 @@ namespace CalculatorEngine
         /// </summary>
         /// <param name="op">The operator character</param>
         /// <returns>The new node</returns>
-        public OperatorNode CreateOperatorNode(char op)
+        public virtual OperatorNode CreateOperatorNode(char op)
         {
             if (this.operators.ContainsKey(op))
             {
@@ -71,7 +71,7 @@ namespace CalculatorEngine
         /// </summary>
         /// <param name="op">The trig operator string</param>
         /// <returns>The new node</returns>
-        public TrigNode CreateTrigOperatorNode(char trigOp, double value, char measurement)
+        public virtual TrigNode CreateTrigOperatorNode(char trigOp, double value, char measurement)
         {
             if (this.trigOperators.ContainsKey(trigOp))
             {
@@ -91,7 +91,7 @@ namespace CalculatorEngine
         /// <param name="opA">The left operator</param>
         /// <param name="opB">The right operator</param>
         /// <returns>A bool</returns>
-        public bool IsHigherPrecedence(char opA, char opB)
+        public virtual bool IsHigherPrecedence(char opA, char opB)
         {
             Type operatorA = this.operators[opA];
             Type operatorB = this.operators[opB];
@@ -107,7 +107,7 @@ namespace CalculatorEngine
         /// </summary>
         /// <param name="op">The character</param>
         /// <returns>A bool</returns>
-        public bool IsValidOperator(char op)
+        public virtual bool IsValidOperator(char op)
         {
             if (new ExpressionTreeFactory().operators.ContainsKey(op))
             {
@@ -122,7 +122,7 @@ namespace CalculatorEngine
         /// </summary>
         /// <param name="trigOp">The Trig representation as a string</param>
         /// <returns>A bool</returns>
-        public bool IsValidTrigOperator(char trigOp)
+        public virtual bool IsValidTrigOperator(char trigOp)
         {
             if (new ExpressionTreeFactory().trigOperators.ContainsKey(trigOp))
             {

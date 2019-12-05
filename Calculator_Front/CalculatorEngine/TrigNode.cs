@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CalculatorEngine
 {
-    internal abstract class TrigNode : ExpressionNode
+    public abstract class TrigNode : ExpressionNode
     {
         /// <summary>
         /// 

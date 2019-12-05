@@ -7,7 +7,7 @@ namespace CalculatorEngine
     /// <summary>
     /// The constant node, mainly numbers
     /// </summary>
-    internal class ConstantNode : ExpressionNode
+    public class ConstantNode : ExpressionNode
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ConstantNode"/> class.
