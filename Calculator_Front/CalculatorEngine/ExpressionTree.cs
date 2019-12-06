@@ -17,8 +17,10 @@ namespace CalculatorEngine
         public List<ExpressionNode> ShuntingYardAlgorithm();
         public double Evaluate(ExpressionNode theNode);
         public ExpressionNode ConstructTree(List<ExpressionNode> postfix);
-        public ExpressionNode GetRoot();
-        public ExpressionTreeFactory GetFactory();
+        public ExpressionTreeFactory ExpressionFactory { get; set; }
+        public ExpressionNode Root { get; set; }
+        public string InfixExpression { get; set; }
+
 
     }
 
@@ -43,7 +45,8 @@ namespace CalculatorEngine
 
         public double Evaluate()
         {
-            return this._expressionTree.Evaluate();
+            this.Root = this.ConstructTree(this.ShuntingYardAlgorithm());
+            return this.Evaluate(this.Root);
         }
 
         public List<ExpressionNode> ShuntingYardAlgorithm()
@@ -61,14 +64,31 @@ namespace CalculatorEngine
             return this._expressionTree.ConstructTree(postfix);
         }
 
-        public ExpressionNode GetRoot()
+        public string InfixExpression
         {
-            return this._expressionTree.GetRoot();
+            get { return this._expressionTree.InfixExpression; }
+            set
+            {
+                this._expressionTree.InfixExpression = value;
+            }
         }
 
-        public ExpressionTreeFactory GetFactory()
+        public ExpressionNode Root
         {
-            return this._expressionTree.GetFactory();
+            get { return this._expressionTree.Root; }
+            set
+            {
+                this._expressionTree.Root = value;
+            }
+        }
+
+        public ExpressionTreeFactory ExpressionFactory
+        {
+            get { return this._expressionTree.ExpressionFactory; }
+            set
+            {
+                this._expressionTree.ExpressionFactory = value;
+            }
         }
 
     }
@@ -112,11 +132,6 @@ namespace CalculatorEngine
         /// <param name="expression">Expression to construct the tree.</param>
         public ExpressionTree(string expression) => this.infixexpression = expression;
 
-/*        public ExpressionTree()
-        {
-            this.infixexpression = "";
-        }*/
-
         /// <summary>
         /// Makes the variable node
         /// </summary>
@@ -129,14 +144,36 @@ namespace CalculatorEngine
 
         internal ExpressionTreeFactory Expressiontreefactory => this.treeFactory;
 
-        public ExpressionTreeFactory GetFactory()
+        public ExpressionTreeFactory ExpressionFactory
         {
-            return this.treeFactory;
+            get { return this.treeFactory; }
+            set
+            {
+                this.treeFactory = value;
+            }
         }
 
-        public ExpressionNode GetRoot()
+        public ExpressionNode Root
         {
-            return this.root;
+            get { return this.root; }
+            set
+            {
+                this.root = value;
+            }
+        }
+
+        public string InfixExpression
+        {
+            get { return this.infixexpression; }
+            set
+            {
+                this.infixexpression = value;
+            }
+        }
+
+        public void SetExpression(string expression)
+        {
+            this.infixexpression = expression;
         }
 
         /// <summary>

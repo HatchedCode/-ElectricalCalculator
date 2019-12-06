@@ -17,57 +17,24 @@ namespace CalculatorEngineIntegrationTests
 
             Console.WriteLine("Starting Integration Testing\n");
             Console.WriteLine("-----------------------------------------------------------------------------------------------------------------\n");
-            result = IntegrationTests.IntegrateEvaluatewithInterface();
+            result = IntegrationTests.IntegrateEvaluate();
             expected = 12;
             Console.WriteLine("Step 0: Integrate with Interface Body Evaluate: E={0} R={1} = {2}\n", expected, result, expected == result);
 
-            result = IntegrationTests.IntegrateShuntingYardwithInterface();
-            expected = 12;
-            Console.WriteLine("Step 0: Integrate with Interface Body ShuntingYard: E={0} R={1} = {2}\n", expected, result, expected == result);
-
-            result = IntegrationTests.IntegrateEvaluate();
-            expected = 12;
-            Console.WriteLine("Step 0: Integrate Evaluate: E={0} R={1} = {2}\n",expected, result, expected == result);
-
             result = IntegrationTests.IntegrateShuntingYard();
-            expected = 5;
-            Console.WriteLine("Step 1: Integrate ShuntingYardAlgorithm: E={0} R={1} = {2}\n", expected, result, expected == result);
+            expected = 12;
+            Console.WriteLine("Step 1: Integrate with Interface Body ShuntingYard: E={0} R={1} = {2}\n", expected, result, expected == result);
 
             result = IntegrationTests.IntegrateConstructTree();
             expected = 5;
-            Console.WriteLine("Step 2: Integrate ConstructTree: E={0} R={1} = {2}\n", expected, result, expected == result);
-
-
+            Console.WriteLine("Step 2: Integrate with Interface Body ConstructTree: E={0} R={1} = {2}\n", expected, result, expected == result);
 
             result = IntegrationTests.IntegrateExpressionEvaluate();
-            expected = 12;
-            Console.WriteLine("Step 3: Integrate Evaluate: E={0} R={1} = {2}\n", expected, result, expected == result);
-
-            result = IntegrationTests.IntegrateIsValidTrigOperator();
-            expected = 5;
-            Console.WriteLine("Step 4: Integrate ShuntingYardAlgorithm: E={0} R={1} = {2}\n", expected, result, expected == result);
-
-            result = IntegrationTests.IntegrateCreateTrigOperatorNode();
-            expected = 5;
-            Console.WriteLine("Step 5: Integrate ConstructTree: E={0} R={1} = {2}\n", expected, result, expected == result);
-
-
-
-            result = IntegrationTests.IntegrateIsValidOperator();
-            expected = 12;
-            Console.WriteLine("Step 6: Integrate Evaluate: E={0} R={1} = {2}\n", expected, result, expected == result);
-
-            result = IntegrationTests.IntegrateCreateOperatorNode();
-            expected = 5;
-            Console.WriteLine("Step 7: Integrate ShuntingYardAlgorithm: E={0} R={1} = {2}\n", expected, result, expected == result);
-
-            result = IntegrationTests.IntegrateIsHigherPrecedence();
-            expected = 5;
-            Console.WriteLine("Step 8: Integrate ConstructTree: E={0} R={1} = {2}\n", expected, result, expected == result);
-
+            expected = 0;
+            Console.WriteLine("Step 3: Integrate with Interface Body ExpressionEvaluate: E={0} R={1} = {2}\n", expected, result, expected == result);
 
             result = IntegrationTests.IntegrateEvaluateEvaluate();
-            expected = 12;
+            expected = 35;
             Console.WriteLine("Step 9: Integrate Evaluate: E={0} R={1} = {2}\n", expected, result, expected == result);
 
             Console.WriteLine("-----------------------------------------------------------------------------------------------------------------\n");
