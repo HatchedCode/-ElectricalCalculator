@@ -248,5 +248,177 @@ namespace CalculatorEngineTests
 
 
         }
+
+
+        //Black Box
+
+        [TestMethod]
+        public void TestEvaluateBlackBox()
+        {
+
+            /*----------------------------------------------
+             *inputs      | Expected output
+             * positives
+             * 1+1        | 2
+             * 4-1        | 3
+             * 2*4        | 8
+             * 4/2        | 2
+             * 9%2        | 1
+             * COS(RAD(0) |1
+             * Sin(Deg(90))
+             * 
+             * zeros
+             * 0+0        |0
+             * 2-2        |0
+             * 2*0        |0
+             * 0/2        |0
+             * 0%2        |0
+             * Cos(deg(1)) |0
+             * Sin(Rad(0)  |0
+             * Negatives
+             * -10+1      |-9
+             * 4-5        |-1
+             * -2*2       |-4
+             * -4/2       |-2
+             * -11%2      |1
+             * Errors?
+             * 1/0
+             * 1%0
+             * a+3
+            ------------------------------------------------
+             */
+            ExpressionTree tree = new ExpressionTree("");
+
+
+            //positives
+            tree = new ExpressionTree("1+1");
+            Assert.AreEqual(2, tree.Evaluate());
+            tree = new ExpressionTree("4-1");
+            Assert.AreEqual(3, tree.Evaluate());
+            tree = new ExpressionTree("2*4");
+            Assert.AreEqual(8, tree.Evaluate());
+            tree = new ExpressionTree("4/2");
+            Assert.AreEqual(2, tree.Evaluate());
+            tree = new ExpressionTree("9%2");
+            Assert.AreEqual(1, tree.Evaluate());
+            //Rad
+            tree = new ExpressionTree("cR(0)");
+            Assert.AreEqual(1, tree.Evaluate());
+            //Deg
+            tree = new ExpressionTree("sD(90)");
+            Assert.AreEqual(1, tree.Evaluate());
+
+            //zeros
+            tree = new ExpressionTree("0+0");
+            Assert.AreEqual(0, tree.Evaluate());
+            tree = new ExpressionTree("2-2");
+            Assert.AreEqual(0, tree.Evaluate());
+            tree = new ExpressionTree("2*0");
+            Assert.AreEqual(0, tree.Evaluate());
+            tree = new ExpressionTree("0/2");
+            Assert.AreEqual(0, tree.Evaluate());
+            tree = new ExpressionTree("0%2");
+            Assert.AreEqual(0, tree.Evaluate());
+            //Deg
+            tree = new ExpressionTree("cD(90)");
+            Assert.AreEqual(0, tree.Evaluate()); 
+            //Rad
+            tree = new ExpressionTree("sR(0)");
+            Assert.AreEqual(0, tree.Evaluate());
+
+
+            //negatives (did not impliment negative into programm yet)
+            //tree = new ExpressionTree("n10+1");
+            //Assert.AreEqual(-9, tree.Evaluate());
+            tree = new ExpressionTree("4-5");
+            Assert.AreEqual(-1, tree.Evaluate());
+            //tree = new ExpressionTree("-4*2");
+            //Assert.AreEqual(-8, tree.Evaluate());
+            //tree = new ExpressionTree("n4/2");
+            //Assert.AreEqual(2, tree.Evaluate());
+            //tree = new ExpressionTree("n11%2");
+            //Assert.AreEqual(1, tree.Evaluate());
+
+            //currently return ininity
+            //tree = new ExpressionTree("1/0");
+            //Assert.Fail("Divide by Zero", tree.Evaluate());
+
+            // tree = new ExpressionTree("1%0");
+            //Assert.Fail("Divide by Zero", tree.Evaluate());   
+          
+         
+
+        }
+
+        [TestMethod]
+        public void TestConstructTreeBlackBox()
+        {
+            /*  input                   |   output
+             * varNode,varNode,addNode |   addNode
+             * varNode,varNode,subtractNode |   subtractNode
+             * varNode,varNode,MultiplyNode |   MultiplyNode
+             * varNode,varNode,DivideNode |   DivideNode
+             * varNode,varNode,ModNode |   ModNode
+             * varNode                  | var Node
+             */
+
+            //Add node
+            ExpressionTree tree = new ExpressionTree("20+1");
+            PrivateObject t = new PrivateObject(tree);
+            System.Collections.Generic.List<ExpressionNode> postfixList = new System.Collections.Generic.List<ExpressionNode>();
+            postfixList.Add(new ConstantNode(1));
+            postfixList.Add(new ConstantNode(5));
+            postfixList.Add(new AddNode());
+
+            Object ret = t.Invoke("ConstructTree", postfixList);
+            ExpressionNode head = (ExpressionNode)ret;
+
+            
+            Assert.IsTrue(head is AddNode);
+
+            //subtract Node
+            postfixList = new System.Collections.Generic.List<ExpressionNode>();
+            postfixList.Add(new ConstantNode(1));
+            postfixList.Add(new ConstantNode(5));
+            postfixList.Add(new SubtractNode());
+
+            ret = t.Invoke("ConstructTree", postfixList);
+            head = (ExpressionNode)ret;
+
+            Assert.IsTrue(head is SubtractNode);
+
+            //Divide Node
+            postfixList = new System.Collections.Generic.List<ExpressionNode>();
+            postfixList.Add(new ConstantNode(1));
+            postfixList.Add(new ConstantNode(5));
+            postfixList.Add(new DivideNode());
+
+            ret = t.Invoke("ConstructTree", postfixList);
+            head = (ExpressionNode)ret;
+
+            Assert.IsTrue(head is DivideNode);
+
+            //Multiply Node
+            postfixList = new System.Collections.Generic.List<ExpressionNode>();
+            postfixList.Add(new ConstantNode(1));
+            postfixList.Add(new ConstantNode(5));
+            postfixList.Add(new MultiplyNode());
+
+            ret = t.Invoke("ConstructTree", postfixList);
+            head = (ExpressionNode)ret;
+
+            Assert.IsTrue(head is MultiplyNode);
+
+            //Constant Node
+            postfixList = new System.Collections.Generic.List<ExpressionNode>();
+            postfixList.Add(new ConstantNode(1));
+
+            ret = t.Invoke("ConstructTree", postfixList);
+            head = (ExpressionNode)ret;
+
+            Assert.IsTrue(head is ConstantNode);
+        }
     }
 }
+
+
