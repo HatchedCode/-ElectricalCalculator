@@ -263,6 +263,25 @@ namespace CalculatorEngineTests
         }
 
         [TestMethod]
+        public void TestIsHigherPrecedence2()
+        {
+            // test same precedence 
+            bool expected = false;
+            bool actual = this.factory.IsHigherPrecedence('+', '+');
+            Assert.AreEqual(expected, actual);
+
+            actual = this.factory.IsHigherPrecedence('*', '*');
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void TestIsValidOperator2()
+        {
+            // some more test cases
+            Assert.AreEqual(expected: false, this.factory.IsValidOperator('\0'));
+            Assert.AreEqual(expected: false, this.factory.IsValidOperator(' '));
+            Assert.AreEqual(expected: false, this.factory.IsValidOperator('^'));
+        }
+        [TestMethod]
         public void TestIsValidOperator()
         {
             //Testing addition operator
